@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FileProvider 导出路径：仅暴露应用专属外部目录下的 exports，不暴露公共存储。 -->
+<paths>
+    <external-files-path
+        name="exports"
+        path="exports/" />
+</paths>

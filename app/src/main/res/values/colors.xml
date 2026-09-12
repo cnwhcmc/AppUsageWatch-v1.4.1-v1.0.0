@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0F766E</color>
+    <color name="primary_dark">#115E59</color>
+    <color name="accent">#EA580C</color>
+    <color name="bg">#F8FAFC</color>
+    <color name="card">#FFFFFF</color>
+    <color name="text_main">#1E293B</color>
+    <color name="text_sub">#64748B</color>
+    <color name="divider">#E2E8F0</color>
+    <color name="fg_color">#0F766E</color>
+    <color name="bg_color">#EA580C</color>
+    <color name="file_color">#2563EB</color>
+</resources>

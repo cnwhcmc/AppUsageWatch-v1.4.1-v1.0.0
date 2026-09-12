@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">使用日志</string>
+
+    <string name="master_switch_label">记录</string>
+    <string name="btn_refresh">刷新</string>
+    <string name="master_switch_on">已开启，正在后台记录</string>
+    <string name="master_switch_off">未开启，点击开关开始记录</string>
+    <string name="toast_notification_perm">通知权限未授予，前台通知可能不显示（不影响记录）</string>
+    <string name="toast_monitoring_started">已开启记录，服务正在后台运行</string>
+    <string name="toast_monitoring_stopped">已停止记录</string>
+
+    <string name="tab_logs">运行日志</string>
+    <string name="tab_files">文件事件</string>
+    <string name="tab_settings">设置</string>
+    <string name="subtab_all">全部</string>
+    <string name="subtab_background">后台</string>
+
+    <string name="filter_all_apps">全部应用</string>
+    <string name="filter_all">全部</string>
+    <string name="filter_today">今天</string>
+    <string name="filter_yesterday">昨天</string>
+    <string name="filter_7d">近7天</string>
+
+    <string name="title_usage_access">使用情况访问未开启</string>
+    <string name="msg_usage_access">需要开启"使用情况访问"才能记录应用运行时间。点击前往设置开启。</string>
+    <string name="btn_goto_settings">前往设置</string>
+    <string name="btn_cancel">取消</string>
+
+    <string name="setting_display_mode">日志显示模式</string>
+    <string name="setting_retention_days">日志保留天数</string>
+    <string name="setting_monitor_dirs">文件监控目录</string>
+    <string name="setting_monitor_scope">监控范围</string>
+    <string name="setting_storage_access">存储访问</string>
+    <string name="setting_sample_interval">采样频率</string>
+    <string name="setting_keepalive">保活向导</string>
+    <string name="setting_accessibility">无障碍服务（手动）</string>
+    <string name="setting_storage">存储用量与清理</string>
+    <string name="setting_export">导出日志</string>
+    <string name="setting_privilege">当前权限模式</string>
+    <string name="setting_version_log">版本日志</string>
+    <string name="setting_usage_access">使用情况访问</string>
+    <string name="setting_battery">省电白名单</string>
+    <string name="setting_autostart">自启动管理</string>
+    <string name="setting_service_status">采集服务状态</string>
+    <string name="setting_notification">通知权限</string>
+    <string name="setting_notification_visible">通知栏常驻通知</string>
+
+    <string name="service_running">运行中</string>
+    <string name="service_stopped">未运行</string>
+    <string name="service_last_tick">最后采集 %1$s</string>
+    <string name="notification_granted">已授予</string>
+    <string name="notification_denied">未授予</string>
+    <string name="notification_auto">系统已自动授予</string>
+
+    <string name="event_foreground">前台运行</string>
+    <string name="event_background">后台运行</string>
+    <string name="event_ongoing">运行中（未结束）</string>
+    <string name="event_file_write">文件写入</string>
+    <string name="event_file_move">文件移动</string>
+    <string name="event_file_create">文件创建</string>
+    <string name="event_file_delete">文件删除</string>
+    <string name="event_media_change">媒体库变化</string>
+    <string name="event_screen_on">亮屏</string>
+    <string name="event_screen_off">熄屏/锁屏</string>
+    <string name="event_sys_note">系统提示</string>
+    <string name="unknown_app">未知应用</string>
+
+    <string name="export_success">已导出：%1$s</string>
+    <string name="export_failed">导出失败</string>
+    <string name="clean_done">已清理过期日志</string>
+    <string name="no_data">暂无数据</string>
+    <string name="mode_normal">普通模式</string>
+    <string name="mode_shell">Shell 模式（Shizuku）</string>
+    <string name="mode_root">Root 模式</string>
+
+    <!-- 服务与通知 -->
+    <string name="channel_name">采集服务</string>
+    <string name="notify_title">正在记录使用日志</string>
+    <string name="notify_text">后台采集应用运行与文件事件</string>
+    <string name="notify_stop">停止</string>
+
+    <!-- 设置补充 -->
+    <string name="setting_bg_estimate">后台运行估算</string>
+
+    <!-- 无障碍服务说明（默认关闭，手动可选） -->
+    <string name="accessibility_desc">仅用于前台窗口切换的实时交叉验证（手动开启，默认关闭）。不拦截任何按钮或操作。</string>
+</resources>
