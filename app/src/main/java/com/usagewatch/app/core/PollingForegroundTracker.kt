@@ -51,6 +51,8 @@ class PollingForegroundTracker {
         out: MutableList<LogEntry>
     ) {
         if (pkg.isNullOrBlank()) return // 探测失败：保持现状，下次闭合
+        // 监测范围过滤：仅监测模式且该包未勾选 → 本轮忽略，不输出、不记账、不更新段状态
+        if (!com.usagewatch.app.util.SettingsStore.shouldMonitor(pkg)) return
         ensureDay(now)
         if (pkg == lastPkg) return      // 前台未变化：不重复输出
         // 闭合上一段（成对输出，保证线性日志完整）

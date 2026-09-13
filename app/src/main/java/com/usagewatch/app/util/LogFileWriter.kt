@@ -16,9 +16,15 @@ import java.util.Locale
  */
 object LogFileWriter {
 
-    private val dayFmt = ThreadLocal.withInitial { SimpleDateFormat("yyyyMMdd", Locale.US) }
+    // 注意：不用 ThreadLocal.withInitial（API 26+，minSdk 25 会崩溃），用 initialValue() 覆盖（API 1 兼容）
+    private val dayFmt = object : ThreadLocal<SimpleDateFormat>() {
+        override fun initialValue(): SimpleDateFormat = SimpleDateFormat("yyyyMMdd", Locale.US)
+    }
     // 毫秒级对使用记录无意义，落盘日志统一到秒
-    private val lineFmt = ThreadLocal.withInitial { SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US) }
+    private val lineFmt = object : ThreadLocal<SimpleDateFormat>() {
+        override fun initialValue(): SimpleDateFormat =
+            SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
+    }
 
     private fun logsDir(context: Context): File =
         context.getExternalFilesDir("logs") ?: context.filesDir.resolve("logs")

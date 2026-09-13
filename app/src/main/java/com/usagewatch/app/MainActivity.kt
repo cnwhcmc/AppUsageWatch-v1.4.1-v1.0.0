@@ -232,6 +232,8 @@ class MainActivity : AppCompatActivity() {
         pageLogs.visibility = if (index == 0) View.VISIBLE else View.GONE
         pageFiles.visibility = if (index == 1) View.VISIBLE else View.GONE
         pageSettings.visibility = if (index == 2) View.VISIBLE else View.GONE
+        // 文件事件与应用无关联：该页隐藏"全部应用"筛选下拉，仅保留时间段筛选（时间限制对文件日志同样生效）
+        spApp.visibility = if (index == 1) View.GONE else View.VISIBLE
         val active = getColor(R.color.primary)
         val inactive = getColor(R.color.text_sub)
         tabLogs.setTextColor(if (index == 0) active else inactive)
@@ -274,17 +276,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initSpinners() {
-        // 应用筛选：全部应用 + 所有已安装应用（记录过的按最近打开在前，其余按字母序）
+        // 应用筛选：全部应用 / 仅监测所选应用（可勾选，真实控制后台采集范围）/ 单个已安装应用
         spApp.adapter = object : BaseAdapter() {
-            override fun getCount(): Int = appPackages.size + 1
-            override fun getItem(pos: Int): Any = if (pos == 0) "" else appPackages[pos - 1]
+            override fun getCount(): Int = appPackages.size + 2
+            override fun getItem(pos: Int): Any = when (pos) {
+                0 -> ""
+                1 -> "\u0000monitor"
+                else -> appPackages[pos - 2]
+            }
             override fun getItemId(pos: Int): Long = pos.toLong()
             override fun getView(pos: Int, v: View?, parent: ViewGroup): View {
                 val tv = TextView(this@MainActivity).apply { textSize = 15f }
-                tv.text = if (pos == 0) {
-                    getString(R.string.filter_all_apps)
-                } else {
-                    AppInfoResolver.resolve(this@MainActivity, appPackages[pos - 1]).label
+                tv.text = when (pos) {
+                    0 -> getString(R.string.filter_all_apps)
+                    1 -> monitorSpinnerLabel()
+                    else -> AppInfoResolver.resolve(this@MainActivity, appPackages[pos - 2]).label
                 }
                 return tv
             }
@@ -300,7 +306,24 @@ class MainActivity : AppCompatActivity() {
         ).apply { setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) }
 
         spApp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) { if (!refreshing) refresh() }
+            override fun onItemSelected(p: AdapterView<*>?, v: View?, pos: Int, id: Long) {
+                if (pos == 1) {
+                    // "仅监测所选应用"：不受 refreshing 标志限制，任何时候点击都必须弹窗
+                    // （首次打开时 refresh 正在后台跑，若被 refreshing 拦截会导致弹窗出不来）
+                    showMonitorAppsDialog()
+                } else if (pos == 0) {
+                    // 切回"全部应用" = 恢复监测全部应用（取消应用过滤），与勾选语义闭环
+                    if (SettingsStore.monitorFiltered()) {
+                        SettingsStore.setMonitorFiltered(false)
+                        SettingsStore.setMonitorPackages(emptySet())
+                        (spApp.adapter as BaseAdapter).notifyDataSetChanged()
+                        Toast.makeText(this@MainActivity, "已恢复：监测全部应用", Toast.LENGTH_SHORT).show()
+                    }
+                    if (!refreshing) refresh()
+                } else if (!refreshing) {
+                    refresh()
+                }
+            }
             override fun onNothingSelected(p: AdapterView<*>?) {}
         }
         spRange.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -308,6 +331,245 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(p: AdapterView<*>?) {}
         }
     }
+
+    /** 监测下拉第二项文案：未启用=入口提示；已启用=当前监测数量。 */
+    private fun monitorSpinnerLabel(): String {
+        return if (SettingsStore.monitorFiltered()) {
+            val n = SettingsStore.monitorPackages().size
+            "仅监测所选应用（$n 个）"
+        } else {
+            "仅监测所选应用…"
+        }
+    }
+
+    /**
+     * 勾选监测应用入口：首次弹出带"不再提示"的说明；之后直接进勾选列表。
+     * 确定后写入设置：后台采集（UsageStats / 轮询 / 校准）在源头丢弃未勾选应用的数据，
+     * 日志体积随监测范围缩小；取消则恢复为"全部应用"。
+     */
+    private fun showMonitorAppsDialog() {
+        val apps = try { installedApps() } catch (_: Exception) { emptyList() }
+        if (apps.isEmpty()) {
+            Toast.makeText(this, "未找到可监测的应用", Toast.LENGTH_SHORT).show()
+            spApp.setSelection(0)
+            return
+        }
+        if (!SettingsStore.monitorHintDismissed()) {
+            showMonitorHintOnce(apps)
+        } else {
+            showMonitorPicker(apps)
+        }
+    }
+
+    /** 一次性说明（可勾选"不再提示"）：一句说明 + 勾选"不再提示"，之后直接进勾选列表。 */
+    private fun showMonitorHintOnce(apps: List<String>) {
+        val body = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(24), dp(16), dp(24), dp(8))
+        }
+        val tip = TextView(this).apply {
+            text = "只记录勾选的应用，未勾选的不再产生新日志。"
+            textSize = 14f
+            setTextColor(getColor(R.color.text_main))
+        }
+        val dismissBox = android.widget.CheckBox(this).apply {
+            text = "不再提示"
+            textSize = 14f
+            setPadding(0, dp(12), 0, 0)
+        }
+        body.addView(tip)
+        body.addView(dismissBox)
+        AlertDialog.Builder(this)
+            .setTitle("仅监测所选应用")
+            .setView(body)
+            .setPositiveButton("知道了") { d, _ ->
+                SettingsStore.setMonitorHintDismissed(dismissBox.isChecked)
+                d.dismiss()
+                showMonitorPicker(apps)
+            }
+            .setNegativeButton("取消") { d, _ ->
+                d.dismiss()
+                // 保持当前下拉项：取消=不改动监测状态
+            }
+            .show()
+    }
+
+    /**
+     * 勾选列表（自定义 View）：顶部搜索框 + 每行 CheckBox + 应用图标 + 应用名。
+     * 勾选框本身可点击（点框即勾选），点击行其他区域也可切换，两种入口互不冲突。
+     * 搜索按应用名/包名实时过滤；底部"全选/清空"就地刷新；确定后写入设置，取消则回退全部应用。
+     */
+    private fun showMonitorPicker(apps: List<String>) {
+        val selected = SettingsStore.monitorPackages()
+        val checked = BooleanArray(apps.size) { i -> selected.contains(apps[i]) }
+        val filteredApps = ArrayList(apps)
+
+        // 搜索框：实时按名称/包名过滤（小写忽略大小写；空输入显示全部）
+        val searchInput = android.widget.EditText(this).apply {
+            hint = "搜索应用"
+            textSize = 14f
+            setSingleLine(true)
+            setPadding(dp(12), dp(4), dp(12), dp(4))
+            imeOptions = android.view.inputmethod.EditorInfo.IME_ACTION_DONE
+        }
+
+        val listView = ListView(this)
+        listView.adapter = object : BaseAdapter() {
+            override fun getCount(): Int = filteredApps.size
+            override fun getItem(pos: Int): Any = filteredApps[pos]
+            override fun getItemId(pos: Int): Long = pos.toLong()
+            override fun getView(pos: Int, v: View?, parent: ViewGroup): View {
+                // ViewHolder 复用：滚动/过滤时不重复创建子控件，大列表不卡顿
+                val holder: PickerHolder
+                val row: LinearLayout
+                if (v == null) {
+                    row = LinearLayout(this@MainActivity).apply {
+                        orientation = LinearLayout.HORIZONTAL
+                        gravity = android.view.Gravity.CENTER_VERTICAL
+                        setPadding(dp(8), dp(10), dp(8), dp(10))
+                    }
+                    val cb = android.widget.CheckBox(this@MainActivity).apply {
+                        isFocusable = false // 可点击但不抢焦点框；状态由自身点击直接同步
+                        setPadding(0, 0, dp(10), 0)
+                    }
+                    val icon = android.widget.ImageView(this@MainActivity).apply {
+                        layoutParams = LinearLayout.LayoutParams(dp(26), dp(26))
+                    }
+                    val label = TextView(this@MainActivity).apply {
+                        textSize = 15f
+                        setPadding(dp(10), 0, 0, 0)
+                    }
+                    row.addView(cb)
+                    row.addView(icon)
+                    row.addView(label)
+                    holder = PickerHolder(cb, icon, label)
+                    row.tag = holder
+                    // 整行点击切换勾选（点击勾选框时由勾选框自身处理，不会走到这里）
+                    row.setOnClickListener {
+                        val ai = holder.appIdx
+                        if (ai in checked.indices) {
+                            checked[ai] = !checked[ai]
+                            notifyDataSetChanged()
+                        }
+                    }
+                    // 勾选框自身点击：状态已翻转，直接同步数组（不重建行，视觉即时）
+                    cb.setOnClickListener {
+                        val ai = holder.appIdx
+                        if (ai in checked.indices) checked[ai] = cb.isChecked
+                    }
+                } else {
+                    @Suppress("UNCHECKED_CAST")
+                    row = v as LinearLayout
+                    holder = row.tag as PickerHolder
+                }
+                val pkg = filteredApps[pos]
+                val appIdx = apps.indexOf(pkg)
+                holder.appIdx = appIdx
+                holder.cb.isChecked = checked[appIdx]
+                holder.icon.setImageDrawable(AppInfoResolver.resolve(this@MainActivity, pkg).icon)
+                holder.label.text = AppInfoResolver.resolve(this@MainActivity, pkg).label
+                return row
+            }
+        }
+        searchInput.addTextChangedListener(object : android.text.TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, st: Int, c: Int, a: Int) {}
+            override fun onTextChanged(s: CharSequence?, st: Int, c: Int, a: Int) {}
+            override fun afterTextChanged(s: android.text.Editable?) {
+                val q = s?.toString()?.trim()?.lowercase() ?: ""
+                filteredApps.clear()
+                if (q.isEmpty()) {
+                    filteredApps.addAll(apps)
+                } else {
+                    for (pkg in apps) {
+                        val label = runCatching {
+                            AppInfoResolver.resolve(this@MainActivity, pkg).label.lowercase()
+                        }.getOrDefault(pkg)
+                        if (label.contains(q) || pkg.contains(q)) filteredApps.add(pkg)
+                    }
+                }
+                (listView.adapter as BaseAdapter).notifyDataSetChanged()
+            }
+        })
+
+        val btnRow = LinearLayout(this).apply {
+            orientation = LinearLayout.HORIZONTAL
+            gravity = android.view.Gravity.CENTER
+            setPadding(0, dp(4), 0, 0)
+        }
+        val btnAll = android.widget.Button(this).apply {
+            text = "全选"
+            setOnClickListener {
+                for (i in checked.indices) checked[i] = true
+                (listView.adapter as BaseAdapter).notifyDataSetChanged()
+            }
+        }
+        val btnClear = android.widget.Button(this).apply {
+            text = "清空"
+            setOnClickListener {
+                for (i in checked.indices) checked[i] = false
+                (listView.adapter as BaseAdapter).notifyDataSetChanged()
+            }
+        }
+        btnRow.addView(btnAll, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+        btnRow.addView(btnClear, LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f))
+
+        val emptyTv = TextView(this).apply {
+            text = "无匹配应用"
+            gravity = android.view.Gravity.CENTER
+            setTextColor(getColor(R.color.text_sub))
+            textSize = 14f
+            setPadding(0, dp(28), 0, 0)
+        }
+
+        val root = LinearLayout(this).apply {
+            orientation = LinearLayout.VERTICAL
+            setPadding(dp(4), 0, dp(4), 0)
+        }
+        root.addView(searchInput)
+        root.addView(listView, LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT, 0, 1f
+        ))
+        root.addView(emptyTv)
+        root.addView(btnRow)
+        listView.emptyView = emptyTv // 过滤无结果时显示空态，列表隐藏
+
+        AlertDialog.Builder(this)
+            .setTitle("仅监测所选应用")
+            .setView(root)
+            .setPositiveButton("确定") { d, _ ->
+                val chosen = apps.filterIndexed { i, _ -> checked[i] }.toSet()
+                if (chosen.isEmpty()) {
+                    SettingsStore.setMonitorFiltered(false)
+                    SettingsStore.setMonitorPackages(emptySet())
+                    Toast.makeText(this, "未勾选应用，保持监测全部", Toast.LENGTH_SHORT).show()
+                    d.dismiss()
+                    spApp.setSelection(0) // 显示"全部应用"（filtered 已关，选中项仅触发刷新）
+                } else {
+                    SettingsStore.setMonitorFiltered(true)
+                    SettingsStore.setMonitorPackages(chosen)
+                    Toast.makeText(this, "已设置：仅监测 ${chosen.size} 个应用", Toast.LENGTH_SHORT).show()
+                    d.dismiss()
+                    (spApp.adapter as BaseAdapter).notifyDataSetChanged()
+                    refresh()
+                }
+            }
+            .setNegativeButton("取消") { d, _ ->
+                d.dismiss()
+                // 保持当前下拉项：取消=不改动监测状态（若这里回 0 会在已过滤时误触发"恢复全部"）
+            }
+            .show()
+    }
+
+    /** 勾选列表行复用器：缓存子控件与当前行对应的全量列表索引。 */
+    private class PickerHolder(
+        val cb: android.widget.CheckBox,
+        val icon: android.widget.ImageView,
+        val label: TextView,
+        var appIdx: Int = -1
+    )
+
+    private fun dp(v: Int): Int =
+        (v * resources.displayMetrics.density).toInt()
 
     /**
      * 顶部刷新按钮：重启采集服务 + 全量刷新。
@@ -347,7 +609,8 @@ class MainActivity : AppCompatActivity() {
                 emptyList()
             }
             val (start, end) = rangeBounds(rangeSel)
-            val pkg = if (pkgSel <= 0) null else packages.getOrNull(pkgSel - 1)
+            // pos0=全部应用、pos1=仅监测所选应用（查看全部）：均不按单应用过滤
+            val pkg = if (pkgSel <= 1) null else packages.getOrNull(pkgSel - 2)
             val usage = try {
                 if (bg) repo.queryBackgroundOnly(pkg, start, end)
                 else repo.queryUsage(pkg, start, end)

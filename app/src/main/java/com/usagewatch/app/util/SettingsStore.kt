@@ -28,6 +28,9 @@ object SettingsStore {
     private const val KEY_MONITOR_WHOLE_STORAGE = "monitor_whole_storage"
     private const val KEY_FORCE_NORMAL_MODE = "force_normal_mode"
     private const val KEY_NOTIFICATION_VISIBLE = "notification_visible"
+    private const val KEY_MONITOR_FILTERED = "monitor_filtered"
+    private const val KEY_MONITOR_PACKAGES = "monitor_packages"
+    private const val KEY_MONITOR_HINT_DISMISSED = "monitor_hint_dismissed"
 
     /** 默认监控目录（相对 /storage/emulated/0 的公共目录） */
     val DEFAULT_MONITOR_DIRS: Set<String> = setOf(
@@ -116,6 +119,41 @@ object SettingsStore {
 
     fun setNotificationVisible(visible: Boolean) {
         prefs.edit().putBoolean(KEY_NOTIFICATION_VISIBLE, visible).apply()
+    }
+
+    // ---- 应用监测范围：false=监测全部应用；true=仅监测 monitorPackages 中勾选的应用 ----
+    /** 是否启用"仅监测所选应用"（开启后未勾选应用的前台/后台数据不再采集，日志体积显著变小） */
+    fun monitorFiltered(): Boolean = prefs.getBoolean(KEY_MONITOR_FILTERED, false)
+
+    fun setMonitorFiltered(filtered: Boolean) {
+        prefs.edit().putBoolean(KEY_MONITOR_FILTERED, filtered).apply()
+    }
+
+    /** 已勾选待监测的包名集合。 */
+    fun monitorPackages(): Set<String> =
+        prefs.getStringSet(KEY_MONITOR_PACKAGES, emptySet()) ?: emptySet()
+
+    fun setMonitorPackages(packages: Set<String>) {
+        prefs.edit().putStringSet(KEY_MONITOR_PACKAGES, packages).apply()
+    }
+
+    /** 监测范围提示是否已被用户"不再提示"（一次性提示，避免每次弹窗打扰） */
+    fun monitorHintDismissed(): Boolean = prefs.getBoolean(KEY_MONITOR_HINT_DISMISSED, false)
+
+    fun setMonitorHintDismissed(dismissed: Boolean) {
+        prefs.edit().putBoolean(KEY_MONITOR_HINT_DISMISSED, dismissed).apply()
+    }
+
+    /**
+     * 采集层统一判定：某包名是否应被记录。
+     *  - 未启用过滤 → 全部记录；
+     *  - 已启用过滤 → 仅记录勾选集合中的包；
+     *  - 空包名（亮灭屏/系统提示等全局条目）不受应用过滤影响，始终放行。
+     */
+    fun shouldMonitor(pkg: String): Boolean {
+        if (!monitorFiltered()) return true
+        if (pkg.isEmpty()) return true
+        return pkg in monitorPackages()
     }
 
     // ---- 后台估算开关 ----

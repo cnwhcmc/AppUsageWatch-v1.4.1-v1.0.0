@@ -1,0 +1,25 @@
+# ===== 敏感文件（严禁提交）=====
+# release 签名密钥与密码：泄露可被冒用签名
+keystore.properties
+app/keystore.properties
+keystore/
+*.jks
+*.keystore
+
+# 本机环境路径（含用户目录）
+local.properties
+
+# ===== 构建产物 =====
+.gradle/
+build/
+app/build/
+*.apk
+*.aab
+
+# ===== IDE / 系统 =====
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/

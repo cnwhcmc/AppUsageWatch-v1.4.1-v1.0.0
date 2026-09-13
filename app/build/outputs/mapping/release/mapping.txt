@@ -3,8 +3,8 @@
 # min_api: 25
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: 5e38a72
-# pg_map_hash: SHA-256 5e38a721d83bf88a39490fe65aa596a3011880b58bd7492aa5fb0914b4c7086a
+# pg_map_id: 1ebc377
+# pg_map_hash: SHA-256 1ebc37723aa123f14e2de27101cc91f10aa781f37fc152e77cf5c9f30d68c5a0
 android.app.AppComponentFactory -> android.app.AppComponentFactory:
 # {"id":"com.android.tools.r8.synthesized"}
 android.support.v4.app.RemoteActionCompatParcelizer -> android.support.v4.app.RemoteActionCompatParcelizer:
@@ -242,7 +242,7 @@ androidx.activity.ComponentActivity$$ExternalSyntheticLambda0 -> androidx.activi
     14:24:void androidx.activity.ComponentActivity$$InternalSyntheticLambda$2$f7979a7b7286ed37b664e8d41a94ec65e3d54774ca037fa175dd9df0faa673c4$0.run$bridge():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
     25:28:void androidx.activity.ComponentActivity$$InternalSyntheticLambda$2$f7979a7b7286ed37b664e8d41a94ec65e3d54774ca037fa175dd9df0faa673c4$0.run$bridge():0:0 -> run
-    29:41:void com.usagewatch.app.MainActivity.hardRefresh$lambda$13(com.usagewatch.app.MainActivity):0:0 -> run
+    29:41:void com.usagewatch.app.MainActivity.hardRefresh$lambda$29(com.usagewatch.app.MainActivity):0:0 -> run
     29:41:void androidx.activity.ComponentActivity$$InternalSyntheticLambda$2$f7979a7b7286ed37b664e8d41a94ec65e3d54774ca037fa175dd9df0faa673c4$0.run$bridge():0 -> run
     42:45:void androidx.activity.ComponentActivity$$InternalSyntheticLambda$2$f7979a7b7286ed37b664e8d41a94ec65e3d54774ca037fa175dd9df0faa673c4$0.run$bridge():0:0 -> run
     46:48:void androidx.lifecycle.ProcessLifecycleOwner.delayedPauseRunnable$lambda$0(androidx.lifecycle.ProcessLifecycleOwner):0:0 -> run
@@ -8589,12 +8589,12 @@ androidx.appcompat.widget.AppCompatDrawableManager$1 -> h.x:
     1:1:void com.usagewatch.app.ui.SettingsBuilder.addDivider():0:0 -> b
     137:141:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> c
     137:141:void com.usagewatch.app.ui.SettingsBuilder.addRow(int,kotlin.jvm.functions.Function0,kotlin.jvm.functions.Function0):0 -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(ILd1/a;Lv0/i;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(ILd1/a;Lv0/h;)V"}
     142:145:void com.usagewatch.app.ui.SettingsBuilder.addRow(int,kotlin.jvm.functions.Function0,kotlin.jvm.functions.Function0):0:0 -> c
     1:1:void com.usagewatch.app.ui.SettingsBuilder.addSection(java.lang.String):0:0 -> d
     151:155:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> e
     151:155:void com.usagewatch.app.ui.SettingsBuilder.addSwitchRowWithValue(int,boolean,kotlin.jvm.functions.Function0,kotlin.jvm.functions.Function1):0 -> e
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(IZLv0/j;Lv0/m;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(IZLv0/i;Lv0/l;)V"}
     156:159:void com.usagewatch.app.ui.SettingsBuilder.addSwitchRowWithValue(int,boolean,kotlin.jvm.functions.Function0,kotlin.jvm.functions.Function1):0:0 -> e
     1:17:boolean com.usagewatch.app.core.KeepAliveHelper.canUseRootKeepAlive():0:0 -> f
     1:17:boolean com.usagewatch.app.core.KeepAliveHelper.applyRootKeepAlive():0 -> f
@@ -20761,7 +20761,7 @@ com.usagewatch.app.MainActivity -> com.usagewatch.app.MainActivity:
     com.usagewatch.app.ui.LogAdapter fileAdapter -> M
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/b;"}
     com.usagewatch.app.data.LogRepository repo -> N
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/d;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/c;"}
     com.usagewatch.app.ui.SettingsBuilder settingsBuilder -> O
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lh/x;"}
     android.widget.TextView subTabAll -> P
@@ -20801,32 +20801,34 @@ com.usagewatch.app.MainActivity -> com.usagewatch.app.MainActivity:
     80:106:androidx.activity.result.ActivityResultLauncher androidx.activity.ComponentActivity.registerForActivityResult(androidx.activity.result.contract.ActivityResultContract,androidx.activity.result.ActivityResultRegistry,androidx.activity.result.ActivityResultCallback):0:0 -> <init>
     80:106:androidx.activity.result.ActivityResultLauncher androidx.activity.ComponentActivity.registerForActivityResult(androidx.activity.result.contract.ActivityResultContract,androidx.activity.result.ActivityResultCallback):0 -> <init>
     80:106:void <init>():0 -> <init>
-    39:49:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.addAll(java.util.Collection,java.lang.Object[]):0:0 -> A
-    39:49:void requestRuntimePermissionsIfNeeded():0 -> A
-    50:56:boolean com.usagewatch.app.util.Permissions.hasNotificationPermission(android.content.Context):0:0 -> A
-    50:56:void requestRuntimePermissionsIfNeeded():0 -> A
-    57:64:void requestRuntimePermissionsIfNeeded():0:0 -> A
-    65:71:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0:0 -> A
-    65:71:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> A
-    65:71:void requestRuntimePermissionsIfNeeded():0 -> A
-    72:96:void kotlin.ranges.IntRange.<init>(int,int):0:0 -> A
-    72:96:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0 -> A
-    72:96:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> A
-    72:96:void requestRuntimePermissionsIfNeeded():0 -> A
-    97:104:int kotlin.ranges.IntProgressionIterator.nextInt():0:0 -> A
-    97:104:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0 -> A
-    97:104:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> A
-    97:104:void requestRuntimePermissionsIfNeeded():0 -> A
-    105:150:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0:0 -> A
-    105:150:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> A
-    105:150:void requestRuntimePermissionsIfNeeded():0 -> A
-    151:165:void requestRuntimePermissionsIfNeeded():0:0 -> A
-    166:169:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> A
-    166:169:void requestRuntimePermissionsIfNeeded():0 -> A
+    1:1:void refresh():0:0 -> A
+    39:49:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.addAll(java.util.Collection,java.lang.Object[]):0:0 -> B
+    39:49:void requestRuntimePermissionsIfNeeded():0 -> B
+    50:56:boolean com.usagewatch.app.util.Permissions.hasNotificationPermission(android.content.Context):0:0 -> B
+    50:56:void requestRuntimePermissionsIfNeeded():0 -> B
+    57:64:void requestRuntimePermissionsIfNeeded():0:0 -> B
+    65:71:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0:0 -> B
+    65:71:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> B
+    65:71:void requestRuntimePermissionsIfNeeded():0 -> B
+    72:96:void kotlin.ranges.IntRange.<init>(int,int):0:0 -> B
+    72:96:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0 -> B
+    72:96:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> B
+    72:96:void requestRuntimePermissionsIfNeeded():0 -> B
+    97:104:int kotlin.ranges.IntProgressionIterator.nextInt():0:0 -> B
+    97:104:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0 -> B
+    97:104:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> B
+    97:104:void requestRuntimePermissionsIfNeeded():0 -> B
+    105:150:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.filterInPlace$CollectionsKt__MutableCollectionsKt(java.util.List,kotlin.jvm.functions.Function1,boolean):0:0 -> B
+    105:150:boolean kotlin.collections.CollectionsKt__MutableCollectionsKt.removeAll(java.util.List,kotlin.jvm.functions.Function1):0 -> B
+    105:150:void requestRuntimePermissionsIfNeeded():0 -> B
+    151:165:void requestRuntimePermissionsIfNeeded():0:0 -> B
+    166:169:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> B
+    166:169:void requestRuntimePermissionsIfNeeded():0 -> B
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    1:1:void showPage(int):0:0 -> B
-    1:1:void showSubTab(boolean):0:0 -> C
-    1:1:long startOfDay(int):0:0 -> D
+    1:1:void showMonitorPicker(java.util.List):0:0 -> C
+    1:1:void showPage(int):0:0 -> D
+    1:1:void showSubTab(boolean):0:0 -> E
+    1:1:long startOfDay(int):0:0 -> F
     1:1:void initTabs():0:0 -> onCreate
     1:1:void onCreate(android.os.Bundle):0 -> onCreate
     2:2:void initSpinners():0:0 -> onCreate
@@ -20880,13 +20882,13 @@ com.usagewatch.app.MainActivity -> com.usagewatch.app.MainActivity:
     118:121:void checkUsageAccess():0 -> x
     122:125:boolean com.usagewatch.app.util.SettingsStore.isUsageGuideShown():0:0 -> x
     122:125:void checkUsageAccess():0 -> x
-    88:92:java.util.Set kotlin.collections.CollectionsKt___CollectionsKt.toMutableSet(java.lang.Iterable):0:0 -> y
-    88:92:java.util.List kotlin.collections.CollectionsKt___CollectionsKt.distinct(java.lang.Iterable):0 -> y
-    88:92:java.util.List installedApps():0 -> y
-    93:96:java.util.List kotlin.collections.CollectionsKt___CollectionsKt.distinct(java.lang.Iterable):0:0 -> y
-    93:96:java.util.List installedApps():0 -> y
-    97:113:java.util.List installedApps():0:0 -> y
-    1:1:void refresh():0:0 -> z
+    1:1:int dp(int):0:0 -> y
+    88:92:java.util.Set kotlin.collections.CollectionsKt___CollectionsKt.toMutableSet(java.lang.Iterable):0:0 -> z
+    88:92:java.util.List kotlin.collections.CollectionsKt___CollectionsKt.distinct(java.lang.Iterable):0 -> z
+    88:92:java.util.List installedApps():0 -> z
+    93:96:java.util.List kotlin.collections.CollectionsKt___CollectionsKt.distinct(java.lang.Iterable):0:0 -> z
+    93:96:java.util.List installedApps():0 -> z
+    97:113:java.util.List installedApps():0:0 -> z
 com.usagewatch.app.MainActivity$$ExternalSyntheticLambda0 -> p0.b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -20902,84 +20904,84 @@ com.usagewatch.app.MainActivity$$ExternalSyntheticLambda0 -> p0.b:
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.<init>(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    17:25:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    17:25:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     17:25:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
     26:27:java.util.List com.usagewatch.app.data.LogRepository.distinctAppPackages():0:0 -> run
-    26:27:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    26:27:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
     26:27:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     28:30:java.util.List com.usagewatch.app.data.LogRepository.distinctAppPackages():0:0 -> run
-    28:30:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    28:30:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     28:30:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     31:65:java.util.List com.usagewatch.app.data.DbHelper.distinctAppPackages():0:0 -> run
     31:65:java.util.List com.usagewatch.app.data.LogRepository.distinctAppPackages():0 -> run
-    31:65:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    31:65:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     31:65:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
-    66:109:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    66:109:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     66:109:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     110:116:java.util.List com.usagewatch.app.data.DbHelper.distinctAppPackages():0:0 -> run
     110:116:java.util.List com.usagewatch.app.data.LogRepository.distinctAppPackages():0 -> run
-    110:116:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    110:116:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     110:116:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
-    117:143:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    117:143:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     117:143:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     144:151:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0:0 -> run
-    144:151:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    144:151:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     144:151:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     152:158:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> run
     152:158:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0 -> run
-    152:158:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    152:158:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     152:158:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     159:170:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0:0 -> run
-    159:170:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    159:170:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     159:170:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     171:177:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> run
     171:177:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0 -> run
-    171:177:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    171:177:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     171:177:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     178:193:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0:0 -> run
-    178:193:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    178:193:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     178:193:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     194:199:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> run
     194:199:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0 -> run
-    194:199:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    194:199:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     194:199:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     200:211:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0:0 -> run
-    200:211:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    200:211:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     200:211:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     212:218:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> run
     212:218:kotlin.Pair com.usagewatch.app.MainActivity.rangeBounds(int):0 -> run
-    212:218:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    212:218:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     212:218:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
-    219:241:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    219:241:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     219:241:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     242:253:java.lang.Object kotlin.collections.CollectionsKt___CollectionsKt.getOrNull(java.util.List,int):0:0 -> run
-    242:253:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    242:253:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     242:253:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
-    254:287:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    254:287:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     254:287:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     288:295:java.util.List com.usagewatch.app.data.LogRepository.queryUsage(java.lang.String,long,long,int):0:0 -> run
     288:295:java.util.List com.usagewatch.app.data.LogRepository.queryUsage$default(com.usagewatch.app.data.LogRepository,java.lang.String,long,long,int,int,java.lang.Object):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    288:295:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    288:295:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     288:295:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     296:301:java.util.List com.usagewatch.app.data.LogRepository.queryUsage(java.lang.String,long,long,int):0:0 -> run
     296:301:java.util.List com.usagewatch.app.data.LogRepository.queryUsage$default(com.usagewatch.app.data.LogRepository,java.lang.String,long,long,int,int,java.lang.Object):0 -> run
-    296:301:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    296:301:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     296:301:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
-    302:319:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    302:319:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     302:319:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     320:325:java.util.List com.usagewatch.app.data.LogRepository.queryFiles(long,long,int):0:0 -> run
     320:325:java.util.List com.usagewatch.app.data.LogRepository.queryFiles$default(com.usagewatch.app.data.LogRepository,long,long,int,int,java.lang.Object):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    320:325:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    320:325:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     320:325:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
     326:330:java.util.List com.usagewatch.app.data.LogRepository.queryFiles(long,long,int):0:0 -> run
     326:330:java.util.List com.usagewatch.app.data.LogRepository.queryFiles$default(com.usagewatch.app.data.LogRepository,long,long,int,int,java.lang.Object):0 -> run
-    326:330:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
+    326:330:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0 -> run
     326:330:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
-    331:355:void com.usagewatch.app.MainActivity.refresh$lambda$16(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
+    331:355:void com.usagewatch.app.MainActivity.refresh$lambda$32(com.usagewatch.app.MainActivity,int,int,boolean,int):0:0 -> run
     331:355:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$1$c2873d5f01afaa5c0dfb24c6115fc8a8ffce737268d630f8b7bbf4fecd1392aa$0.run():0 -> run
 com.usagewatch.app.MainActivity$$ExternalSyntheticLambda1 -> p0.c:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
@@ -21057,37 +21059,131 @@ com.usagewatch.app.MainActivity$$ExternalSyntheticLambda2 -> p0.d:
 com.usagewatch.app.MainActivity$$ExternalSyntheticLambda3 -> p0.e:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    com.usagewatch.app.MainActivity com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.f$0 -> a
+    com.usagewatch.app.MainActivity com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.f$0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    int com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.f$1 -> b
+    int com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.f$1 -> b
       # {"id":"com.android.tools.r8.synthesized"}
-    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.f$2 -> c
+    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.f$2 -> c
       # {"id":"com.android.tools.r8.synthesized"}
-    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.f$3 -> d
+    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.f$3 -> d
       # {"id":"com.android.tools.r8.synthesized"}
-    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.f$4 -> e
+    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.f$4 -> e
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.<init>(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> <init>
+    1:1:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.<init>(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    7:65:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
-    7:65:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
+    7:65:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
+    7:65:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
     66:70:void com.usagewatch.app.ui.LogAdapter.submit(java.util.List):0:0 -> run
-    66:70:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0 -> run
-    66:70:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
-    71:74:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
-    71:74:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
+    66:70:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0 -> run
+    66:70:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
+    71:74:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
+    71:74:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
     75:79:void com.usagewatch.app.ui.LogAdapter.submit(java.util.List):0:0 -> run
-    75:79:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0 -> run
-    75:79:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
-    80:83:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
-    80:83:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
+    75:79:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0 -> run
+    75:79:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
+    80:83:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
+    80:83:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
     84:100:void com.usagewatch.app.ui.SettingsBuilder.updateStatus():0:0 -> run
-    84:100:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0 -> run
-    84:100:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
-    101:122:void com.usagewatch.app.MainActivity.refresh$lambda$16$lambda$15(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
-    101:122:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$23c588cf432af6c68418464dee0e1ceddcb2ce83449f2b50960273e330f39aa4$0.run():0 -> run
-com.usagewatch.app.MainActivity$initSpinners$1 -> p0.f:
+    84:100:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0 -> run
+    84:100:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
+    101:122:void com.usagewatch.app.MainActivity.refresh$lambda$32$lambda$31(com.usagewatch.app.MainActivity,int,java.util.List,java.util.List,java.util.List):0:0 -> run
+    101:122:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$99ae36f6472ce8f4f15433734e6739dd9b42e87938fb00846b782a7292d14d9d$0.run():0 -> run
+com.usagewatch.app.MainActivity$$ExternalSyntheticLambda4 -> p0.f:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    int com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.$r8$classId -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+    boolean[] com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.f$0 -> b
+      # {"id":"com.android.tools.r8.synthesized"}
+    android.widget.ListView com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.f$1 -> c
+      # {"id":"com.android.tools.r8.synthesized"}
+    1:10:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.<init>(boolean[],android.widget.ListView):0:0 -> <init>
+    1:10:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.$r8$init$synthetic(boolean[],android.widget.ListView,int):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    19:46:void com.usagewatch.app.MainActivity.showMonitorPicker$lambda$23$lambda$22(boolean[],android.widget.ListView,android.view.View):0:0 -> onClick
+    19:46:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.onClick$bridge(android.view.View):0 -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+    47:48:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.onClick$bridge(android.view.View):0:0 -> onClick
+    49:76:void com.usagewatch.app.MainActivity.showMonitorPicker$lambda$21$lambda$20(boolean[],android.widget.ListView,android.view.View):0:0 -> onClick
+    49:76:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$0.onClick$bridge(android.view.View):0 -> onClick
+com.usagewatch.app.MainActivity$$ExternalSyntheticLambda5 -> p0.g:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    int com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.$r8$classId -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+    com.usagewatch.app.MainActivity com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.f$1 -> b
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ljava/lang/Object;"}
+      # {"id":"com.android.tools.r8.synthesized"}
+    java.util.List com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.f$0 -> c
+      # {"id":"com.android.tools.r8.synthesized"}
+    boolean[] com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.f$2 -> d
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ljava/lang/Object;"}
+      # {"id":"com.android.tools.r8.synthesized"}
+    1:1:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.$r8$init$synthetic(android.widget.CheckBox,com.usagewatch.app.MainActivity,java.util.List):0:0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    2:2:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.<init>(java.util.List,com.usagewatch.app.MainActivity,boolean[]):0:0 -> <init>
+    2:2:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.$r8$init$synthetic(java.util.List,java.lang.Object,boolean[],int):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    30:75:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0:0 -> onClick
+    30:75:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+    76:81:void kotlin.collections.CollectionsKt__CollectionsKt.throwIndexOverflow():0:0 -> onClick
+    76:81:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
+    76:81:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    82:85:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0:0 -> onClick
+    82:85:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    86:102:void com.usagewatch.app.util.SettingsStore.setMonitorDirs(java.util.Set):0:0 -> onClick
+    86:102:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
+    86:102:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    103:113:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0:0 -> onClick
+    103:113:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    114:121:void com.usagewatch.app.util.SettingsStore.setMonitorDirs(java.util.Set):0:0 -> onClick
+    114:121:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
+    114:121:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    122:125:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0:0 -> onClick
+    126:140:void com.usagewatch.app.MainActivity.showMonitorHintOnce$lambda$16(android.widget.CheckBox,com.usagewatch.app.MainActivity,java.util.List,android.content.DialogInterface,int):0:0 -> onClick
+    126:140:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    141:157:void com.usagewatch.app.util.SettingsStore.setMonitorHintDismissed(boolean):0:0 -> onClick
+    141:157:void com.usagewatch.app.MainActivity.showMonitorHintOnce$lambda$16(android.widget.CheckBox,com.usagewatch.app.MainActivity,java.util.List,android.content.DialogInterface,int):0 -> onClick
+    141:157:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    158:164:void com.usagewatch.app.MainActivity.showMonitorHintOnce$lambda$16(android.widget.CheckBox,com.usagewatch.app.MainActivity,java.util.List,android.content.DialogInterface,int):0:0 -> onClick
+    158:164:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    165:172:void com.usagewatch.app.util.SettingsStore.setMonitorHintDismissed(boolean):0:0 -> onClick
+    165:172:void com.usagewatch.app.MainActivity.showMonitorHintOnce$lambda$16(android.widget.CheckBox,com.usagewatch.app.MainActivity,java.util.List,android.content.DialogInterface,int):0 -> onClick
+    165:172:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    173:174:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0:0 -> onClick
+    175:219:void com.usagewatch.app.MainActivity.showMonitorPicker$lambda$27(java.util.List,com.usagewatch.app.MainActivity,boolean[],android.content.DialogInterface,int):0:0 -> onClick
+    175:219:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    220:225:void kotlin.collections.CollectionsKt__CollectionsKt.throwIndexOverflow():0:0 -> onClick
+    220:225:void com.usagewatch.app.MainActivity.showMonitorPicker$lambda$27(java.util.List,com.usagewatch.app.MainActivity,boolean[],android.content.DialogInterface,int):0 -> onClick
+    220:225:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+    226:336:void com.usagewatch.app.MainActivity.showMonitorPicker$lambda$27(java.util.List,com.usagewatch.app.MainActivity,boolean[],android.content.DialogInterface,int):0:0 -> onClick
+    226:336:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$2.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+com.usagewatch.app.MainActivity$$ExternalSyntheticLambda6 -> p0.h:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    int com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$3.$r8$classId -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+    1:6:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$3.<init>():0:0 -> <init>
+    1:6:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$3.$r8$init$synthetic(int):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+    8:11:void com.usagewatch.app.MainActivity.showMonitorHintOnce$lambda$17(android.content.DialogInterface,int):0:0 -> onClick
+    8:11:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$3.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+    12:13:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$3.onClick$bridge(android.content.DialogInterface,int):0:0 -> onClick
+    14:18:void com.usagewatch.app.MainActivity.showMonitorPicker$lambda$28(android.content.DialogInterface,int):0:0 -> onClick
+    14:18:void com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$3.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
+com.usagewatch.app.MainActivity$PickerHolder -> p0.i:
+# {"id":"sourceFile","fileName":"MainActivity.kt"}
+    android.widget.CheckBox cb -> a
+    android.widget.ImageView icon -> b
+    android.widget.TextView label -> c
+    int appIdx -> d
+    1:13:void com.usagewatch.app.MainActivity$PickerHolder.<init>(android.widget.CheckBox,android.widget.ImageView,android.widget.TextView,int):0:0 -> <init>
+    1:13:void <init>(android.widget.CheckBox,android.widget.ImageView,android.widget.TextView,int,int,kotlin.jvm.internal.DefaultConstructorMarker):0 -> <init>
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/widget/CheckBox;Landroid/widget/ImageView;Landroid/widget/TextView;)V"}
+com.usagewatch.app.MainActivity$initSpinners$1 -> p0.j:
 # {"id":"sourceFile","fileName":"MainActivity.kt"}
     com.usagewatch.app.MainActivity this$0 -> a
     1:1:void <init>(com.usagewatch.app.MainActivity):0:0 -> <init>
@@ -21096,12 +21192,18 @@ com.usagewatch.app.MainActivity$initSpinners$1 -> p0.f:
     5:11:int getCount():0:0 -> getCount
     8:11:java.util.List com.usagewatch.app.MainActivity.access$getAppPackages$p(com.usagewatch.app.MainActivity):0:0 -> getItem
     8:11:java.lang.Object getItem(int):0 -> getItem
-    12:18:java.lang.Object getItem(int):0:0 -> getItem
+    12:24:java.lang.Object getItem(int):0:0 -> getItem
     1:1:long getItemId(int):0:0 -> getItemId
-    30:33:java.util.List com.usagewatch.app.MainActivity.access$getAppPackages$p(com.usagewatch.app.MainActivity):0:0 -> getView
-    30:33:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
-    34:49:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
-com.usagewatch.app.MainActivity$initSpinners$3 -> p0.g:
+    25:28:java.util.List com.usagewatch.app.MainActivity.access$getAppPackages$p(com.usagewatch.app.MainActivity):0:0 -> getView
+    25:28:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    29:43:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+    44:46:java.lang.String com.usagewatch.app.MainActivity.access$monitorSpinnerLabel(com.usagewatch.app.MainActivity):0:0 -> getView
+    44:46:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    47:86:java.lang.String com.usagewatch.app.MainActivity.monitorSpinnerLabel():0:0 -> getView
+    47:86:java.lang.String com.usagewatch.app.MainActivity.access$monitorSpinnerLabel(com.usagewatch.app.MainActivity):0 -> getView
+    47:86:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    87:94:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+com.usagewatch.app.MainActivity$initSpinners$3 -> p0.k:
 # {"id":"sourceFile","fileName":"MainActivity.kt"}
     int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
@@ -21111,33 +21213,71 @@ com.usagewatch.app.MainActivity$initSpinners$3 -> p0.g:
     1:8:void $r8$init$synthetic(java.lang.Object,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(ILjava/lang/Object;)V"}
-    13:23:void androidx.appcompat.widget.ListPopupWindow$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0:0 -> onItemSelected
-    13:23:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    14:23:void androidx.appcompat.widget.ListPopupWindow$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0:0 -> onItemSelected
+    14:23:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
       # {"id":"com.android.tools.r8.synthesized"}
     24:27:boolean com.usagewatch.app.MainActivity.access$getRefreshing$p(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
     24:27:void com.usagewatch.app.MainActivity$initSpinners$4.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
     24:27:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
-    28:33:void com.usagewatch.app.MainActivity.access$refresh(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
-    28:33:void com.usagewatch.app.MainActivity$initSpinners$4.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
-    28:33:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
-    34:37:boolean com.usagewatch.app.MainActivity.access$getRefreshing$p(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
-    34:37:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
-    34:37:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
-    38:42:void com.usagewatch.app.MainActivity.access$refresh(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
-    38:42:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
-    38:42:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    28:39:void com.usagewatch.app.MainActivity.access$refresh(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
+    28:39:void com.usagewatch.app.MainActivity$initSpinners$4.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    28:39:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    40:41:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0:0 -> onItemSelected
+    40:41:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    42:44:void com.usagewatch.app.MainActivity.access$showMonitorAppsDialog(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
+    42:44:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    42:44:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    45:79:void com.usagewatch.app.MainActivity.showMonitorAppsDialog():0:0 -> onItemSelected
+    45:79:void com.usagewatch.app.MainActivity.access$showMonitorAppsDialog(com.usagewatch.app.MainActivity):0 -> onItemSelected
+    45:79:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    45:79:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    80:91:boolean com.usagewatch.app.util.SettingsStore.monitorHintDismissed():0:0 -> onItemSelected
+    80:91:void com.usagewatch.app.MainActivity.showMonitorAppsDialog():0 -> onItemSelected
+    80:91:void com.usagewatch.app.MainActivity.access$showMonitorAppsDialog(com.usagewatch.app.MainActivity):0 -> onItemSelected
+    80:91:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    80:91:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    92:218:void com.usagewatch.app.MainActivity.showMonitorHintOnce(java.util.List):0:0 -> onItemSelected
+    92:218:void com.usagewatch.app.MainActivity.showMonitorAppsDialog():0 -> onItemSelected
+    92:218:void com.usagewatch.app.MainActivity.access$showMonitorAppsDialog(com.usagewatch.app.MainActivity):0 -> onItemSelected
+    92:218:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    92:218:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    219:224:void com.usagewatch.app.MainActivity.showMonitorAppsDialog():0:0 -> onItemSelected
+    219:224:void com.usagewatch.app.MainActivity.access$showMonitorAppsDialog(com.usagewatch.app.MainActivity):0 -> onItemSelected
+    219:224:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    219:224:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    225:230:boolean com.usagewatch.app.util.SettingsStore.monitorHintDismissed():0:0 -> onItemSelected
+    225:230:void com.usagewatch.app.MainActivity.showMonitorAppsDialog():0 -> onItemSelected
+    225:230:void com.usagewatch.app.MainActivity.access$showMonitorAppsDialog(com.usagewatch.app.MainActivity):0 -> onItemSelected
+    225:230:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    225:230:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    231:247:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0:0 -> onItemSelected
+    231:247:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    248:251:android.widget.Spinner com.usagewatch.app.MainActivity.access$getSpApp$p(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
+    248:251:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    248:251:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    252:281:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0:0 -> onItemSelected
+    252:281:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    282:285:boolean com.usagewatch.app.MainActivity.access$getRefreshing$p(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
+    282:285:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    282:285:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    286:291:void com.usagewatch.app.MainActivity.access$refresh(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
+    286:291:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    286:291:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    292:298:boolean com.usagewatch.app.MainActivity.access$getRefreshing$p(com.usagewatch.app.MainActivity):0:0 -> onItemSelected
+    292:298:void com.usagewatch.app.MainActivity$initSpinners$3.onItemSelected(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
+    292:298:void onItemSelected$bridge(android.widget.AdapterView,android.view.View,int,long):0 -> onItemSelected
     1:1:void onNothingSelected$bridge(android.widget.AdapterView):0:0 -> onNothingSelected
       # {"id":"com.android.tools.r8.synthesized"}
 com.usagewatch.app.MainActivity$initSpinners$4 -> R8$$REMOVED$$CLASS$$212:
 # {"id":"sourceFile","fileName":"MainActivity.kt"}
-com.usagewatch.app.MainActivity$installedApps$$inlined$compareBy$1 -> p0.h:
+com.usagewatch.app.MainActivity$installedApps$$inlined$compareBy$1 -> p0.l:
 # {"id":"sourceFile","fileName":"Comparisons.kt"}
     com.usagewatch.app.MainActivity this$0 -> a
     1:1:void <init>(com.usagewatch.app.MainActivity):0:0 -> <init>
     1:1:int compare(java.lang.Object,java.lang.Object):0:0 -> compare
 com.usagewatch.app.MainActivity$onCreate$2 -> R8$$REMOVED$$CLASS$$213:
 # {"id":"sourceFile","fileName":"MainActivity.kt"}
-com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1 -> p0.i:
+com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1 -> p0.m:
 # {"id":"sourceFile","fileName":"MainActivity.kt"}
     int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
@@ -21189,11 +21329,88 @@ com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1 -> p0.i:
     83:100:java.lang.Boolean com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1.invoke(java.lang.String):0:0 -> c
     83:100:java.lang.Object com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1.invoke(java.lang.Object):0 -> c
     83:100:java.lang.Object invoke$bridge(java.lang.Object):0 -> c
+com.usagewatch.app.MainActivity$showMonitorPicker$1 -> p0.o:
+# {"id":"sourceFile","fileName":"MainActivity.kt"}
+    java.util.ArrayList $filteredApps -> a
+    com.usagewatch.app.MainActivity this$0 -> b
+    java.util.List $apps -> c
+    boolean[] $checked -> d
+    1:1:void <init>(java.util.ArrayList,com.usagewatch.app.MainActivity,java.util.List,boolean[]):0:0 -> <init>
+    1:1:int getCount():0:0 -> getCount
+    1:1:java.lang.Object getItem(int):0:0 -> getItem
+    1:1:long getItemId(int):0:0 -> getItemId
+    30:47:int com.usagewatch.app.MainActivity.access$dp(com.usagewatch.app.MainActivity,int):0:0 -> getView
+    30:47:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    48:58:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+    59:62:int com.usagewatch.app.MainActivity.access$dp(com.usagewatch.app.MainActivity,int):0:0 -> getView
+    59:62:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    63:74:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+    75:82:int com.usagewatch.app.MainActivity.access$dp(com.usagewatch.app.MainActivity,int):0:0 -> getView
+    75:82:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    83:98:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+    99:102:int com.usagewatch.app.MainActivity.access$dp(com.usagewatch.app.MainActivity,int):0:0 -> getView
+    99:102:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    103:168:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+    169:170:void com.usagewatch.app.MainActivity$PickerHolder.setAppIdx(int):0:0 -> getView
+    169:170:android.view.View getView(int,android.view.View,android.view.ViewGroup):0 -> getView
+    171:205:android.view.View getView(int,android.view.View,android.view.ViewGroup):0:0 -> getView
+com.usagewatch.app.MainActivity$showMonitorPicker$1$$ExternalSyntheticLambda0 -> p0.n:
+# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
+# {"id":"com.android.tools.r8.synthesized"}
+    int com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.$r8$classId -> a
+      # {"id":"com.android.tools.r8.synthesized"}
+    com.usagewatch.app.MainActivity$PickerHolder com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.f$0 -> b
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lp0/i;"}
+      # {"id":"com.android.tools.r8.synthesized"}
+    boolean[] com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.f$1 -> c
+      # {"id":"com.android.tools.r8.synthesized"}
+    com.usagewatch.app.MainActivity$showMonitorPicker$1 com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.f$2 -> d
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ljava/lang/Object;"}
+      # {"id":"com.android.tools.r8.synthesized"}
+    1:12:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.<init>(com.usagewatch.app.MainActivity$PickerHolder,boolean[],com.usagewatch.app.MainActivity$showMonitorPicker$1):0:0 -> <init>
+    1:12:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.$r8$init$synthetic(com.usagewatch.app.MainActivity$PickerHolder,boolean[],java.lang.Object,int):0 -> <init>
+      # {"id":"com.android.tools.r8.synthesized"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Lp0/i;[ZLjava/lang/Object;I)V"}
+    18:28:void com.usagewatch.app.MainActivity$showMonitorPicker$1.getView$lambda$5(com.usagewatch.app.MainActivity$PickerHolder,boolean[],android.widget.CheckBox,android.view.View):0:0 -> onClick
+    18:28:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.onClick$bridge(android.view.View):0 -> onClick
+      # {"id":"com.android.tools.r8.synthesized"}
+    29:32:int com.usagewatch.app.MainActivity$PickerHolder.getAppIdx():0:0 -> onClick
+    29:32:void com.usagewatch.app.MainActivity$showMonitorPicker$1.getView$lambda$5(com.usagewatch.app.MainActivity$PickerHolder,boolean[],android.widget.CheckBox,android.view.View):0 -> onClick
+    29:32:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.onClick$bridge(android.view.View):0 -> onClick
+    33:44:void com.usagewatch.app.MainActivity$showMonitorPicker$1.getView$lambda$5(com.usagewatch.app.MainActivity$PickerHolder,boolean[],android.widget.CheckBox,android.view.View):0:0 -> onClick
+    33:44:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.onClick$bridge(android.view.View):0 -> onClick
+    45:55:void com.usagewatch.app.MainActivity$showMonitorPicker$1.getView$lambda$4(com.usagewatch.app.MainActivity$PickerHolder,boolean[],com.usagewatch.app.MainActivity$showMonitorPicker$1,android.view.View):0:0 -> onClick
+    45:55:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.onClick$bridge(android.view.View):0 -> onClick
+    56:59:int com.usagewatch.app.MainActivity$PickerHolder.getAppIdx():0:0 -> onClick
+    56:59:void com.usagewatch.app.MainActivity$showMonitorPicker$1.getView$lambda$4(com.usagewatch.app.MainActivity$PickerHolder,boolean[],com.usagewatch.app.MainActivity$showMonitorPicker$1,android.view.View):0 -> onClick
+    56:59:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.onClick$bridge(android.view.View):0 -> onClick
+    60:72:void com.usagewatch.app.MainActivity$showMonitorPicker$1.getView$lambda$4(com.usagewatch.app.MainActivity$PickerHolder,boolean[],com.usagewatch.app.MainActivity$showMonitorPicker$1,android.view.View):0:0 -> onClick
+    60:72:void com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$0.onClick$bridge(android.view.View):0 -> onClick
+com.usagewatch.app.MainActivity$showMonitorPicker$2 -> p0.p:
+# {"id":"sourceFile","fileName":"MainActivity.kt"}
+    java.util.ArrayList $filteredApps -> a
+    java.util.List $apps -> b
+    android.widget.ListView $listView -> c
+    com.usagewatch.app.MainActivity this$0 -> d
+    1:1:void <init>(java.util.ArrayList,java.util.List,android.widget.ListView,com.usagewatch.app.MainActivity):0:0 -> <init>
+    72:73:java.lang.String com.usagewatch.app.util.AppInfoResolver$AppInfo.getLabel():0:0 -> afterTextChanged
+    72:73:void afterTextChanged(android.text.Editable):0 -> afterTextChanged
+    74:84:void afterTextChanged(android.text.Editable):0:0 -> afterTextChanged
+    85:90:java.lang.Object kotlin.ResultKt.createFailure(java.lang.Throwable):0:0 -> afterTextChanged
+    85:90:void afterTextChanged(android.text.Editable):0 -> afterTextChanged
+    91:96:boolean kotlin.Result.isFailure-impl(java.lang.Object):0:0 -> afterTextChanged
+    91:96:void afterTextChanged(android.text.Editable):0 -> afterTextChanged
+    97:99:void afterTextChanged(android.text.Editable):0:0 -> afterTextChanged
+    100:111:boolean kotlin.text.StringsKt__StringsKt.contains$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object):0:0 -> afterTextChanged
+    100:111:void afterTextChanged(android.text.Editable):0 -> afterTextChanged
+    112:132:void afterTextChanged(android.text.Editable):0:0 -> afterTextChanged
+    1:1:void beforeTextChanged(java.lang.CharSequence,int,int,int):0:0 -> beforeTextChanged
+    1:1:void onTextChanged(java.lang.CharSequence,int,int,int):0:0 -> onTextChanged
 com.usagewatch.app.collector.CollectorManager -> q0.b:
 # {"id":"sourceFile","fileName":"CollectorManager.kt"}
     android.content.Context context -> a
     com.usagewatch.app.data.LogRepository repo -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/d;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/c;"}
     com.usagewatch.app.collector.UsageCollector usageCollector -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lq0/k;"}
     com.usagewatch.app.collector.TimelineProcessor timeline -> d
@@ -21428,12 +21645,12 @@ com.usagewatch.app.collector.TimelineProcessor -> q0.i:
     long activeDayKey -> e
     1:1:void <init>(com.usagewatch.app.collector.UsageCollector,kotlin.jvm.functions.Function1):0:0 -> <init>
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lq0/k;Lq0/a;)V"}
-    114:115:long com.usagewatch.app.collector.TimelineProcessor$DayAcc.getWindowStart():0:0 -> a
-    114:115:void calibrateForeground(java.lang.String,long,java.util.List):0 -> a
+    121:122:long com.usagewatch.app.collector.TimelineProcessor$DayAcc.getWindowStart():0:0 -> a
+    121:122:void calibrateForeground(java.lang.String,long,java.util.List):0 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;JLjava/util/ArrayList;)V"}
-    116:119:void calibrateForeground(java.lang.String,long,java.util.List):0:0 -> a
-    120:122:void com.usagewatch.app.collector.TimelineProcessor$DayAcc.setWindowStart(long):0:0 -> a
-    120:122:void calibrateForeground(java.lang.String,long,java.util.List):0 -> a
+    123:126:void calibrateForeground(java.lang.String,long,java.util.List):0:0 -> a
+    127:129:void com.usagewatch.app.collector.TimelineProcessor$DayAcc.setWindowStart(long):0:0 -> a
+    127:129:void calibrateForeground(java.lang.String,long,java.util.List):0 -> a
     155:158:long com.usagewatch.app.collector.TimelineProcessor$DayAcc.getFgTotal():0:0 -> b
     155:158:void closeSession(java.lang.String,long,java.util.List):0 -> b
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;JLjava/util/ArrayList;)V"}
@@ -21524,20 +21741,20 @@ com.usagewatch.app.collector.TimelineProcessor$process$$inlined$sortBy$1 -> q0.h
     1:6:void com.usagewatch.app.collector.TimelineProcessor$process$$inlined$sortBy$1.<init>():0:0 -> <init>
     1:6:void $r8$init$synthetic(int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    6:7:int com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
+    6:7:int com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
     6:7:int compare$bridge(java.lang.Object,java.lang.Object):0 -> compare
       # {"id":"com.android.tools.r8.synthesized"}
     8:9:long com.usagewatch.app.data.model.LogEntry.getTimestamp():0:0 -> compare
-    8:9:int com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0 -> compare
+    8:9:int com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0 -> compare
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
     8:9:int compare$bridge(java.lang.Object,java.lang.Object):0 -> compare
-    10:15:int com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
+    10:15:int com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
     10:15:int compare$bridge(java.lang.Object,java.lang.Object):0 -> compare
     16:17:long com.usagewatch.app.data.model.LogEntry.getTimestamp():0:0 -> compare
-    16:17:int com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0 -> compare
+    16:17:int com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0 -> compare
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
     16:17:int compare$bridge(java.lang.Object,java.lang.Object):0 -> compare
-    18:26:int com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
+    18:26:int com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
     18:26:int compare$bridge(java.lang.Object,java.lang.Object):0 -> compare
     27:28:int com.usagewatch.app.data.LogRepository$exportToFile$$inlined$sortedBy$1.compare(java.lang.Object,java.lang.Object):0:0 -> compare
     27:28:int compare$bridge(java.lang.Object,java.lang.Object):0 -> compare
@@ -21597,14 +21814,14 @@ com.usagewatch.app.collector.UsageCollector -> q0.k:
     71:74:java.util.List fetchEvents():0:0 -> a
     75:98:void com.usagewatch.app.util.SettingsStore.setLastEventTime(long):0:0 -> a
     75:98:java.util.List fetchEvents():0 -> a
-    99:225:java.util.List fetchEvents():0:0 -> a
-    226:240:void com.usagewatch.app.util.SettingsStore.setLastEventTime(long):0:0 -> a
-    226:240:java.util.List fetchEvents():0 -> a
-    241:255:java.util.List fetchEvents():0:0 -> a
-    256:259:void com.usagewatch.app.util.SettingsStore.setLastEventTime(long):0:0 -> a
-    256:259:java.util.List fetchEvents():0 -> a
-    260:264:long com.usagewatch.app.util.SettingsStore.lastEventTime():0:0 -> a
-    260:264:java.util.List fetchEvents():0 -> a
+    99:244:java.util.List fetchEvents():0:0 -> a
+    245:259:void com.usagewatch.app.util.SettingsStore.setLastEventTime(long):0:0 -> a
+    245:259:java.util.List fetchEvents():0 -> a
+    260:274:java.util.List fetchEvents():0:0 -> a
+    275:278:void com.usagewatch.app.util.SettingsStore.setLastEventTime(long):0:0 -> a
+    275:278:java.util.List fetchEvents():0 -> a
+    279:283:long com.usagewatch.app.util.SettingsStore.lastEventTime():0:0 -> a
+    279:283:java.util.List fetchEvents():0 -> a
 com.usagewatch.app.collector.UsageCollector$RawEvent -> q0.j:
 # {"id":"sourceFile","fileName":"UsageCollector.kt"}
     java.lang.String packageName -> a
@@ -21685,12 +21902,7 @@ com.usagewatch.app.core.ForegroundProbe -> r0.c:
     71:82:java.lang.String currentForegroundPackage():0 -> a
     83:91:java.lang.String com.usagewatch.app.core.ForegroundProbe.parse(java.lang.String):0:0 -> a
     83:91:java.lang.String currentForegroundPackage():0 -> a
-    92:120:java.lang.String currentForegroundPackage():0:0 -> a
-    121:123:boolean kotlin.text.StringsKt__StringsKt.contains(java.lang.CharSequence,java.lang.CharSequence,boolean):0:0 -> a
-    121:123:java.lang.String currentForegroundPackage():0 -> a
-    124:131:int kotlin.text.StringsKt__StringsKt.indexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object):0:0 -> a
-    124:131:boolean kotlin.text.StringsKt__StringsKt.contains(java.lang.CharSequence,java.lang.CharSequence,boolean):0 -> a
-    124:131:java.lang.String currentForegroundPackage():0 -> a
+    92:126:java.lang.String currentForegroundPackage():0:0 -> a
 com.usagewatch.app.core.KeepAliveHelper -> R8$$REMOVED$$CLASS$$220:
 # {"id":"sourceFile","fileName":"KeepAliveHelper.kt"}
 com.usagewatch.app.core.PollingForegroundTracker -> r0.d:
@@ -21729,7 +21941,7 @@ com.usagewatch.app.core.PollingForegroundTracker -> r0.d:
     68:82:boolean kotlin.text.CharsKt__CharJVMKt.isWhitespace(char):0:0 -> b
     68:82:boolean kotlin.text.StringsKt__StringsJVMKt.isBlank(java.lang.CharSequence):0 -> b
     68:82:void onPoll(java.lang.String,long,kotlin.jvm.functions.Function1,java.util.List):0 -> b
-    83:267:void onPoll(java.lang.String,long,kotlin.jvm.functions.Function1,java.util.List):0:0 -> b
+    83:274:void onPoll(java.lang.String,long,kotlin.jvm.functions.Function1,java.util.List):0:0 -> b
     1:1:void settleBackground(long,java.util.List):0:0 -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"(JLjava/util/ArrayList;)V"}
 com.usagewatch.app.core.ProcessMonitor -> r0.f:
@@ -21907,13 +22119,13 @@ com.usagewatch.app.data.DbHelper -> s0.a:
     8:82:android.content.ContentValues usageValues(com.usagewatch.app.data.model.LogEntry):0:0 -> f
     1:1:void onCreate(android.database.sqlite.SQLiteDatabase):0:0 -> onCreate
     1:1:void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int):0:0 -> onUpgrade
-com.usagewatch.app.data.LogRepository -> s0.d:
+com.usagewatch.app.data.LogRepository -> s0.c:
 # {"id":"sourceFile","fileName":"LogRepository.kt"}
     android.content.Context context -> a
     com.usagewatch.app.data.DbHelper db -> b
       # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/a;"}
-    java.lang.ThreadLocal fmt -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/c;"}
+    com.usagewatch.app.data.LogRepository$Companion$fmt$1 fmt -> c
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/b;"}
     1:1:void <clinit>():0:0 -> <clinit>
     13:26:void com.usagewatch.app.data.DbHelper.<init>(android.content.Context):0:0 -> <init>
     13:26:void <init>(android.content.Context):0 -> <init>
@@ -22002,7 +22214,7 @@ com.usagewatch.app.data.LogRepository -> s0.d:
     70:73:void insertUsage(java.util.List):0 -> e
     5:15:java.util.List com.usagewatch.app.data.LogRepository.queryBackgroundOnly(java.lang.String,long,long,int):0:0 -> f
     5:15:java.util.List queryBackgroundOnly$default(com.usagewatch.app.data.LogRepository,java.lang.String,long,long,int,int,java.lang.Object):0 -> f
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ls0/d;Ljava/lang/String;JJ)Ljava/util/ArrayList;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ls0/c;Ljava/lang/String;JJ)Ljava/util/ArrayList;"}
     16:28:java.util.List kotlin.collections.CollectionsKt__CollectionsKt.mutableListOf(java.lang.Object[]):0:0 -> f
     16:28:java.util.List com.usagewatch.app.data.DbHelper.queryBackgroundOnly(java.lang.String,long,long,int):0 -> f
     16:28:java.util.List com.usagewatch.app.data.LogRepository.queryBackgroundOnly(java.lang.String,long,long,int):0 -> f
@@ -22017,32 +22229,27 @@ com.usagewatch.app.data.LogRepository -> s0.d:
     79:170:java.util.List com.usagewatch.app.data.DbHelper.queryBackgroundOnly(java.lang.String,long,long,int):0:0 -> f
     79:170:java.util.List com.usagewatch.app.data.LogRepository.queryBackgroundOnly(java.lang.String,long,long,int):0 -> f
     79:170:java.util.List queryBackgroundOnly$default(com.usagewatch.app.data.LogRepository,java.lang.String,long,long,int,int,java.lang.Object):0 -> f
-com.usagewatch.app.data.LogRepository$$ExternalSyntheticLambda0 -> s0.b:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    int com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.$r8$classId -> a
+com.usagewatch.app.data.LogRepository$Companion$fmt$1 -> s0.b:
+# {"id":"sourceFile","fileName":"LogRepository.kt"}
+    int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    1:6:void com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.<init>():0:0 -> <init>
-    1:6:void com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.$r8$init$synthetic(int):0 -> <init>
+    3:6:void com.usagewatch.app.data.LogRepository$Companion$fmt$1.<init>():0:0 -> <init>
+    3:6:void $r8$init$synthetic(int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    10:17:java.text.SimpleDateFormat com.usagewatch.app.util.LogFileWriter.lineFmt$lambda$1():0:0 -> get
-    10:17:java.lang.Object com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.get$bridge():0 -> get
+    8:15:java.text.SimpleDateFormat com.usagewatch.app.util.LogFileWriter$lineFmt$1.initialValue():0:0 -> a
+    8:15:java.text.SimpleDateFormat initialValue$bridge():0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    18:19:java.lang.Object com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.get$bridge():0:0 -> get
-    20:29:java.text.SimpleDateFormat com.usagewatch.app.util.LogFileWriter.dayFmt$lambda$0():0:0 -> get
-    20:29:java.lang.Object com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.get$bridge():0 -> get
-    30:38:java.text.SimpleDateFormat com.usagewatch.app.data.LogRepository.fmt$lambda$6():0:0 -> get
-    30:38:java.lang.Object com.usagewatch.app.data.LogRepository$$InternalSyntheticLambda$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$0.get$bridge():0 -> get
-com.usagewatch.app.data.LogRepository$$ExternalSyntheticThreadLocal1 -> s0.c:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    java.util.function.Supplier com.usagewatch.app.data.LogRepository$$InternalSyntheticThreadLocal$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$1.initialValueSupplier -> a
+    16:25:java.text.SimpleDateFormat com.usagewatch.app.util.LogFileWriter$dayFmt$1.initialValue():0:0 -> a
+    16:25:java.text.SimpleDateFormat initialValue$bridge():0 -> a
+    26:34:java.text.SimpleDateFormat com.usagewatch.app.data.LogRepository$Companion$fmt$1.initialValue():0:0 -> a
+    26:34:java.text.SimpleDateFormat initialValue$bridge():0 -> a
+    6:10:java.lang.Object com.usagewatch.app.util.LogFileWriter$lineFmt$1.initialValue():0:0 -> initialValue
+    6:10:java.lang.Object initialValue$bridge():0 -> initialValue
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void com.usagewatch.app.data.LogRepository$$InternalSyntheticThreadLocal$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$1.<init>(java.util.function.Supplier):0:0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ls0/b;)V"}
-    1:1:java.lang.Object com.usagewatch.app.data.LogRepository$$InternalSyntheticThreadLocal$1$568808a6555f933e892f9c344ad3c61f5fde51c61f52cfa20016575764a00b83$1.initialValue():0:0 -> initialValue
-      # {"id":"com.android.tools.r8.synthesized"}
+    11:15:java.lang.Object com.usagewatch.app.util.LogFileWriter$dayFmt$1.initialValue():0:0 -> initialValue
+    11:15:java.lang.Object initialValue$bridge():0 -> initialValue
+    16:20:java.lang.Object com.usagewatch.app.data.LogRepository$Companion$fmt$1.initialValue():0:0 -> initialValue
+    16:20:java.lang.Object initialValue$bridge():0 -> initialValue
 com.usagewatch.app.data.LogRepository$exportToFile$$inlined$sortedBy$1 -> R8$$REMOVED$$CLASS$$223:
 # {"id":"sourceFile","fileName":"Comparisons.kt"}
 com.usagewatch.app.data.model.LogEntry -> t0.a:
@@ -22358,11 +22565,11 @@ com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda1 -> v0.d:
     1:8:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$1.$r8$init$synthetic(java.lang.Object,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(ILjava/lang/Object;)V"}
-    24:26:void com.usagewatch.app.MainActivity.checkUsageAccess$lambda$17(com.usagewatch.app.MainActivity,android.content.DialogInterface,int):0:0 -> onClick
+    24:26:void com.usagewatch.app.MainActivity.checkUsageAccess$lambda$33(com.usagewatch.app.MainActivity,android.content.DialogInterface,int):0:0 -> onClick
     24:26:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$1.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
     27:32:void com.usagewatch.app.util.Permissions.openUsageAccessSettings(android.content.Context):0:0 -> onClick
-    27:32:void com.usagewatch.app.MainActivity.checkUsageAccess$lambda$17(com.usagewatch.app.MainActivity,android.content.DialogInterface,int):0 -> onClick
+    27:32:void com.usagewatch.app.MainActivity.checkUsageAccess$lambda$33(com.usagewatch.app.MainActivity,android.content.DialogInterface,int):0 -> onClick
     27:32:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$1.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
     33:48:void com.usagewatch.app.ui.SettingsBuilder$build$33.invoke$lambda$1(com.usagewatch.app.ui.SettingsBuilder,android.content.DialogInterface,int):0:0 -> onClick
     33:48:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$1.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
@@ -22458,47 +22665,6 @@ com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda1 -> v0.d:
 com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda2 -> v0.e:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    java.util.List com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.f$0 -> a
-      # {"id":"com.android.tools.r8.synthesized"}
-    com.usagewatch.app.ui.SettingsBuilder com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.f$1 -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Lh/x;"}
-      # {"id":"com.android.tools.r8.synthesized"}
-    boolean[] com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.f$2 -> c
-      # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.<init>(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[]):0:0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/List;Lh/x;[Z)V"}
-    5:60:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0:0 -> onClick
-    5:60:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-      # {"id":"com.android.tools.r8.synthesized"}
-    61:70:void kotlin.collections.CollectionsKt__CollectionsKt.throwIndexOverflow():0:0 -> onClick
-    61:70:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    61:70:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    71:92:java.util.Set kotlin.collections.CollectionsKt___CollectionsKt.toSet(java.lang.Iterable):0:0 -> onClick
-    71:92:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    71:92:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    93:110:java.util.Collection kotlin.collections.CollectionsKt___CollectionsKt.toCollection(java.lang.Iterable,java.util.Collection):0:0 -> onClick
-    93:110:java.util.Set kotlin.collections.CollectionsKt___CollectionsKt.toSet(java.lang.Iterable):0 -> onClick
-    93:110:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    93:110:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    111:114:java.util.Set kotlin.collections.CollectionsKt___CollectionsKt.toSet(java.lang.Iterable):0:0 -> onClick
-    111:114:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    111:114:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    115:123:java.util.Set kotlin.collections.SetsKt__SetsJVMKt.setOf(java.lang.Object):0:0 -> onClick
-    115:123:java.util.Set kotlin.collections.CollectionsKt___CollectionsKt.toSet(java.lang.Iterable):0 -> onClick
-    115:123:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    115:123:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    124:140:void com.usagewatch.app.util.SettingsStore.setMonitorDirs(java.util.Set):0:0 -> onClick
-    124:140:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    124:140:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    141:153:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0:0 -> onClick
-    141:153:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-    154:158:void com.usagewatch.app.util.SettingsStore.setMonitorDirs(java.util.Set):0:0 -> onClick
-    154:158:void com.usagewatch.app.ui.SettingsBuilder.showMonitorDirsDialog$lambda$31(java.util.List,com.usagewatch.app.ui.SettingsBuilder,boolean[],android.content.DialogInterface,int):0 -> onClick
-    154:158:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2.onClick(android.content.DialogInterface,int):0 -> onClick
-com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda3 -> v0.f:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
     int com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3e508e9cbce5b287e772d917b3f09aabd53f147b23ec597af9291d7c584358fc$0.$r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
     kotlin.jvm.functions.Function1 com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3e508e9cbce5b287e772d917b3f09aabd53f147b23ec597af9291d7c584358fc$0.f$0 -> b
@@ -22534,7 +22700,7 @@ com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda3 -> v0.f:
     130:145:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3e508e9cbce5b287e772d917b3f09aabd53f147b23ec597af9291d7c584358fc$0.onCheckedChanged$bridge(android.widget.CompoundButton,boolean):0 -> onCheckedChanged
     146:160:void com.usagewatch.app.ui.SettingsBuilder.addSwitchRowWithValue$lambda$18$lambda$17(kotlin.jvm.functions.Function1,android.widget.CompoundButton,boolean):0:0 -> onCheckedChanged
     146:160:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3e508e9cbce5b287e772d917b3f09aabd53f147b23ec597af9291d7c584358fc$0.onCheckedChanged$bridge(android.widget.CompoundButton,boolean):0 -> onCheckedChanged
-com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda4 -> v0.g:
+com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda3 -> v0.f:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$9c247cddb1be8597bc7aa63f5b51f2f3fd5dc32902384403917644e2ae444c41$0.$r8$classId -> a
@@ -22602,7 +22768,7 @@ com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda4 -> v0.g:
     313:316:void com.usagewatch.app.util.SettingsStore.setRetentionDays(int):0:0 -> onClick
     313:316:void com.usagewatch.app.ui.SettingsBuilder.showRetentionDialog$lambda$26(int[],com.usagewatch.app.ui.SettingsBuilder,android.content.DialogInterface,int):0 -> onClick
     313:316:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$9c247cddb1be8597bc7aa63f5b51f2f3fd5dc32902384403917644e2ae444c41$0.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
-com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda5 -> v0.h:
+com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda4 -> v0.g:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$3$3446fab8609fd69291307bf2d9611dc9e0461617bf36b7af9a64f5a4281aa84c$0.$r8$classId -> a
@@ -22644,7 +22810,7 @@ com.usagewatch.app.ui.SettingsBuilder$$ExternalSyntheticLambda5 -> v0.h:
     62:98:void com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$3$3446fab8609fd69291307bf2d9611dc9e0461617bf36b7af9a64f5a4281aa84c$0.run$bridge():0 -> run
 com.usagewatch.app.ui.SettingsBuilder$build$1 -> R8$$REMOVED$$CLASS$$235:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
-com.usagewatch.app.ui.SettingsBuilder$build$10 -> v0.i:
+com.usagewatch.app.ui.SettingsBuilder$build$10 -> v0.h:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
     int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
@@ -23014,18 +23180,18 @@ com.usagewatch.app.ui.SettingsBuilder$build$10 -> v0.i:
     379:392:java.lang.String com.usagewatch.app.ui.SettingsBuilder.access$displayModeValue(com.usagewatch.app.ui.SettingsBuilder):0 -> e
     379:392:java.lang.String com.usagewatch.app.ui.SettingsBuilder$build$15.invoke():0 -> e
     379:392:java.lang.String com.usagewatch.app.ui.SettingsBuilder$build$15.invoke$bridge():0 -> e
-com.usagewatch.app.ui.SettingsBuilder$build$11 -> v0.j:
+com.usagewatch.app.ui.SettingsBuilder$build$11 -> v0.i:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
     int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
     com.usagewatch.app.ui.SettingsBuilder$build$11 INSTANCE -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/j;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/i;"}
     com.usagewatch.app.ui.SettingsBuilder$build$13 com.usagewatch.app.ui.SettingsBuilder$build$13.INSTANCE -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/j;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/i;"}
     com.usagewatch.app.ui.SettingsBuilder$build$26 com.usagewatch.app.ui.SettingsBuilder$build$26.INSTANCE -> d
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/j;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/i;"}
     com.usagewatch.app.ui.SettingsBuilder$build$9 com.usagewatch.app.ui.SettingsBuilder$build$9.INSTANCE -> e
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/j;"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Lv0/i;"}
     1:1:void $r8$clinit$synthetic():0:0 -> <clinit>
       # {"id":"com.android.tools.r8.synthesized"}
     1:6:void kotlin.jvm.internal.Lambda.<init>(int):0:0 -> <init>
@@ -23051,7 +23217,7 @@ com.usagewatch.app.ui.SettingsBuilder$build$12 -> R8$$REMOVED$$CLASS$$228:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
 com.usagewatch.app.ui.SettingsBuilder$build$13 -> R8$$REMOVED$$CLASS$$229:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
-com.usagewatch.app.ui.SettingsBuilder$build$14 -> v0.m:
+com.usagewatch.app.ui.SettingsBuilder$build$14 -> v0.l:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
     int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
@@ -23127,7 +23293,7 @@ com.usagewatch.app.ui.SettingsBuilder$build$14 -> v0.m:
     204:208:void com.usagewatch.app.util.SettingsStore.setForceNormalMode(boolean):0:0 -> d
     204:208:void com.usagewatch.app.ui.SettingsBuilder$build$14.invoke(boolean):0 -> d
     204:208:void invoke$bridge(boolean):0 -> d
-com.usagewatch.app.ui.SettingsBuilder$build$14$$ExternalSyntheticLambda0 -> v0.k:
+com.usagewatch.app.ui.SettingsBuilder$build$14$$ExternalSyntheticLambda0 -> v0.j:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.usagewatch.app.ui.SettingsBuilder com.usagewatch.app.ui.SettingsBuilder$build$14$$InternalSyntheticLambda$2$6c66607682d860ec95211338b2b3221d8a06b4d80d0455278a11752a40fc4c3c$0.f$0 -> a
@@ -23144,7 +23310,7 @@ com.usagewatch.app.ui.SettingsBuilder$build$14$$ExternalSyntheticLambda0 -> v0.k
     18:21:void com.usagewatch.app.ui.SettingsBuilder.access$runOnUi(com.usagewatch.app.ui.SettingsBuilder,kotlin.jvm.functions.Function0):0:0 -> run
     18:21:void com.usagewatch.app.ui.SettingsBuilder$build$14.invoke$lambda$0(com.usagewatch.app.ui.SettingsBuilder,boolean):0 -> run
     18:21:void com.usagewatch.app.ui.SettingsBuilder$build$14$$InternalSyntheticLambda$2$6c66607682d860ec95211338b2b3221d8a06b4d80d0455278a11752a40fc4c3c$0.run():0 -> run
-com.usagewatch.app.ui.SettingsBuilder$build$14$1$1 -> v0.l:
+com.usagewatch.app.ui.SettingsBuilder$build$14$1$1 -> v0.k:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
     com.usagewatch.app.ui.SettingsBuilder this$0 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lh/x;"}
@@ -23204,7 +23370,7 @@ com.usagewatch.app.ui.SettingsBuilder$build$32 -> R8$$REMOVED$$CLASS$$249:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
 com.usagewatch.app.ui.SettingsBuilder$build$33 -> R8$$REMOVED$$CLASS$$250:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
-com.usagewatch.app.ui.SettingsBuilder$build$33$1$1$1 -> v0.n:
+com.usagewatch.app.ui.SettingsBuilder$build$33$1$1$1 -> v0.m:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
     com.usagewatch.app.ui.SettingsBuilder this$0 -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lh/x;"}
@@ -23218,7 +23384,7 @@ com.usagewatch.app.ui.SettingsBuilder$build$33$1$1$1 -> v0.n:
     3:6:java.lang.Object invoke():0 -> a
     7:48:void com.usagewatch.app.ui.SettingsBuilder$build$33$1$1$1.invoke():0:0 -> a
     7:48:java.lang.Object invoke():0 -> a
-com.usagewatch.app.ui.SettingsBuilder$build$33$1$1$2 -> v0.o:
+com.usagewatch.app.ui.SettingsBuilder$build$33$1$1$2 -> v0.n:
 # {"id":"sourceFile","fileName":"SettingsBuilder.kt"}
     int $r8$classId -> a
       # {"id":"com.android.tools.r8.synthesized"}
@@ -23318,13 +23484,13 @@ com.usagewatch.app.util.LogFileWriter -> w0.d:
 # {"id":"sourceFile","fileName":"LogFileWriter.kt"}
     com.usagewatch.app.util.LogFileWriter INSTANCE -> a
       # {"id":"com.android.tools.r8.residualsignature","signature":"Lw0/d;"}
-    java.lang.ThreadLocal dayFmt -> b
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/c;"}
-    java.lang.ThreadLocal lineFmt -> c
-      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/c;"}
+    com.usagewatch.app.util.LogFileWriter$dayFmt$1 dayFmt -> b
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/b;"}
+    com.usagewatch.app.util.LogFileWriter$lineFmt$1 lineFmt -> c
+      # {"id":"com.android.tools.r8.residualsignature","signature":"Ls0/b;"}
     3:7:void com.usagewatch.app.util.LogFileWriter.<init>():0:0 -> <clinit>
     3:7:void <clinit>():0 -> <clinit>
-    8:34:void <clinit>():0:0 -> <clinit>
+    8:24:void <clinit>():0:0 -> <clinit>
     42:46:long com.usagewatch.app.data.model.LogEntry.getTimestamp():0:0 -> a
     42:46:void append(android.content.Context,java.util.List):0 -> a
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
@@ -23361,8 +23527,12 @@ com.usagewatch.app.util.LogFileWriter -> w0.d:
     104:171:java.io.File logsDir(android.content.Context):0 -> e
 com.usagewatch.app.util.LogFileWriter$append$1$lines$2 -> R8$$REMOVED$$CLASS$$264:
 # {"id":"sourceFile","fileName":"LogFileWriter.kt"}
-com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1 -> R8$$REMOVED$$CLASS$$265:
+com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1 -> R8$$REMOVED$$CLASS$$265:
 # {"id":"sourceFile","fileName":"Comparisons.kt"}
+com.usagewatch.app.util.LogFileWriter$dayFmt$1 -> R8$$REMOVED$$CLASS$$266:
+# {"id":"sourceFile","fileName":"LogFileWriter.kt"}
+com.usagewatch.app.util.LogFileWriter$lineFmt$1 -> R8$$REMOVED$$CLASS$$267:
+# {"id":"sourceFile","fileName":"LogFileWriter.kt"}
 com.usagewatch.app.util.LogFileWriter$logException$stack$1 -> w0.c:
 # {"id":"sourceFile","fileName":"LogFileWriter.kt"}
     com.usagewatch.app.util.LogFileWriter$logException$stack$1 INSTANCE -> a
@@ -23407,9 +23577,9 @@ com.usagewatch.app.util.Permissions$openAccessibilitySettings$1 -> w0.f:
       # {"id":"com.android.tools.r8.synthesized"}
     25:40:android.content.Intent com.usagewatch.app.util.Permissions$openAccessibilitySettings$1.invoke():0:0 -> d
     25:40:android.content.Intent invoke$bridge():0 -> d
-com.usagewatch.app.util.Permissions$openAppDetailsSettings$1 -> R8$$REMOVED$$CLASS$$266:
+com.usagewatch.app.util.Permissions$openAppDetailsSettings$1 -> R8$$REMOVED$$CLASS$$268:
 # {"id":"sourceFile","fileName":"Permissions.kt"}
-com.usagewatch.app.util.Permissions$openUsageAccessSettings$1 -> R8$$REMOVED$$CLASS$$267:
+com.usagewatch.app.util.Permissions$openUsageAccessSettings$1 -> R8$$REMOVED$$CLASS$$269:
 # {"id":"sourceFile","fileName":"Permissions.kt"}
 com.usagewatch.app.util.SettingsStore -> w0.h:
 # {"id":"sourceFile","fileName":"SettingsStore.kt"}
@@ -23420,11 +23590,16 @@ com.usagewatch.app.util.SettingsStore -> w0.h:
       # {"id":"com.android.tools.r8.residualsignature","signature":"()Lw0/g;"}
     1:1:boolean forceNormalMode():0:0 -> b
     1:1:java.util.Set monitorDirs():0:0 -> c
-    1:1:boolean monitorWholeStorage():0:0 -> d
-    1:1:boolean monitoringEnabled():0:0 -> e
-    1:1:boolean notificationVisible():0:0 -> f
-    1:1:int retentionDays():0:0 -> g
-    1:1:long sampleIntervalMs():0:0 -> h
+    1:1:boolean monitorFiltered():0:0 -> d
+    1:1:java.util.Set monitorPackages():0:0 -> e
+    1:1:boolean monitorWholeStorage():0:0 -> f
+    1:1:boolean monitoringEnabled():0:0 -> g
+    1:1:boolean notificationVisible():0:0 -> h
+    1:1:int retentionDays():0:0 -> i
+    1:1:long sampleIntervalMs():0:0 -> j
+    1:1:void setMonitorFiltered(boolean):0:0 -> k
+    1:1:void setMonitorPackages(java.util.Set):0:0 -> l
+    1:1:boolean shouldMonitor(java.lang.String):0:0 -> m
 com.usagewatch.app.util.SettingsStore$DisplayMode -> w0.g:
 # {"id":"sourceFile","fileName":"SettingsStore.kt"}
     com.usagewatch.app.util.SettingsStore$DisplayMode GUI -> a
@@ -23442,9 +23617,9 @@ com.usagewatch.app.util.SettingsStore$DisplayMode -> w0.g:
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;)Lw0/g;"}
     1:1:com.usagewatch.app.util.SettingsStore$DisplayMode[] values():0:0 -> values
       # {"id":"com.android.tools.r8.residualsignature","signature":"()[Lw0/g;"}
-kotlin.ExceptionsKt__ExceptionsKt -> R8$$REMOVED$$CLASS$$268:
+kotlin.ExceptionsKt__ExceptionsKt -> R8$$REMOVED$$CLASS$$270:
 # {"id":"sourceFile","fileName":"Exceptions.kt"}
-kotlin.LazyKt__LazyJVMKt -> R8$$REMOVED$$CLASS$$269:
+kotlin.LazyKt__LazyJVMKt -> R8$$REMOVED$$CLASS$$271:
 # {"id":"sourceFile","fileName":"LazyJVM.kt"}
 kotlin.Pair -> x0.a:
 # {"id":"sourceFile","fileName":"Tuples.kt"}
@@ -23454,7 +23629,7 @@ kotlin.Pair -> x0.a:
     1:1:boolean equals(java.lang.Object):0:0 -> equals
     1:1:int hashCode():0:0 -> hashCode
     1:1:java.lang.String toString():0:0 -> toString
-kotlin.Result -> R8$$REMOVED$$CLASS$$270:
+kotlin.Result -> R8$$REMOVED$$CLASS$$272:
 # {"id":"sourceFile","fileName":"Result.kt"}
 kotlin.Result$Failure -> x0.b:
 # {"id":"sourceFile","fileName":"Result.kt"}
@@ -23463,7 +23638,7 @@ kotlin.Result$Failure -> x0.b:
     1:1:boolean equals(java.lang.Object):0:0 -> equals
     1:1:int hashCode():0:0 -> hashCode
     1:1:java.lang.String toString():0:0 -> toString
-kotlin.ResultKt -> R8$$REMOVED$$CLASS$$271:
+kotlin.ResultKt -> R8$$REMOVED$$CLASS$$273:
 # {"id":"sourceFile","fileName":"Result.kt"}
 kotlin.SynchronizedLazyImpl -> x0.c:
 # {"id":"sourceFile","fileName":"LazyJVM.kt"}
@@ -23476,7 +23651,7 @@ kotlin.SynchronizedLazyImpl -> x0.c:
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/lifecycle/h0;)V"}
     1:1:java.lang.Object getValue():0:0 -> a
     7:18:java.lang.String toString():0:0 -> toString
-kotlin.TuplesKt -> R8$$REMOVED$$CLASS$$272:
+kotlin.TuplesKt -> R8$$REMOVED$$CLASS$$274:
 # {"id":"sourceFile","fileName":"Tuples.kt"}
 kotlin.UNINITIALIZED_VALUE -> x0.d:
 # {"id":"sourceFile","fileName":"Lazy.kt"}
@@ -23508,9 +23683,9 @@ kotlin.collections.AbstractCollection -> y0.a:
     1:1:java.lang.Object[] toArray():0:0 -> toArray
     2:2:java.lang.Object[] toArray(java.lang.Object[]):0:0 -> toArray
     1:1:java.lang.String toString():0:0 -> toString
-kotlin.collections.AbstractCollection$toString$1 -> R8$$REMOVED$$CLASS$$273:
+kotlin.collections.AbstractCollection$toString$1 -> R8$$REMOVED$$CLASS$$275:
 # {"id":"sourceFile","fileName":"AbstractCollection.kt"}
-kotlin.collections.AbstractIterator -> R8$$REMOVED$$CLASS$$274:
+kotlin.collections.AbstractIterator -> R8$$REMOVED$$CLASS$$276:
 # {"id":"sourceFile","fileName":"AbstractIterator.kt"}
 kotlin.collections.AbstractList -> y0.e:
 # {"id":"sourceFile","fileName":"AbstractList.kt"}
@@ -23529,7 +23704,7 @@ kotlin.collections.AbstractList -> y0.e:
     1:1:java.lang.Object remove(int):0:0 -> remove
     1:1:java.lang.Object set(int,java.lang.Object):0:0 -> set
     1:1:java.util.List subList(int,int):0:0 -> subList
-kotlin.collections.AbstractList$Companion -> R8$$REMOVED$$CLASS$$275:
+kotlin.collections.AbstractList$Companion -> R8$$REMOVED$$CLASS$$277:
 # {"id":"sourceFile","fileName":"AbstractList.kt"}
 kotlin.collections.AbstractList$IteratorImpl -> y0.b:
 # {"id":"sourceFile","fileName":"AbstractList.kt"}
@@ -23740,22 +23915,22 @@ kotlin.collections.ArrayDeque -> y0.h:
     6:6:java.lang.Object[] toArray(java.lang.Object[]):0:0 -> toArray
     7:7:java.lang.Object[] kotlin.collections.CollectionsKt__CollectionsJVMKt.terminateCollectionToArray(int,java.lang.Object[]):0:0 -> toArray
     7:7:java.lang.Object[] toArray(java.lang.Object[]):0 -> toArray
-kotlin.collections.ArraysKt__ArraysJVMKt -> R8$$REMOVED$$CLASS$$276:
+kotlin.collections.ArraysKt__ArraysJVMKt -> R8$$REMOVED$$CLASS$$278:
 # {"id":"sourceFile","fileName":"ArraysJVM.kt"}
-kotlin.collections.ArraysKt___ArraysJvmKt -> R8$$REMOVED$$CLASS$$277:
+kotlin.collections.ArraysKt___ArraysJvmKt -> R8$$REMOVED$$CLASS$$279:
 # {"id":"sourceFile","fileName":"_ArraysJvm.kt"}
-kotlin.collections.ArraysUtilJVM -> R8$$REMOVED$$CLASS$$278:
+kotlin.collections.ArraysUtilJVM -> R8$$REMOVED$$CLASS$$280:
 # {"id":"sourceFile","fileName":"ArraysUtilJVM.java"}
-kotlin.collections.CollectionsKt__CollectionsJVMKt -> R8$$REMOVED$$CLASS$$279:
+kotlin.collections.CollectionsKt__CollectionsJVMKt -> R8$$REMOVED$$CLASS$$281:
 # {"id":"sourceFile","fileName":"CollectionsJVM.kt"}
-kotlin.collections.CollectionsKt__CollectionsKt -> R8$$REMOVED$$CLASS$$280:
+kotlin.collections.CollectionsKt__CollectionsKt -> R8$$REMOVED$$CLASS$$282:
 # {"id":"sourceFile","fileName":"Collections.kt"}
-kotlin.collections.CollectionsKt__IterablesKt -> R8$$REMOVED$$CLASS$$281:
+kotlin.collections.CollectionsKt__IterablesKt -> R8$$REMOVED$$CLASS$$283:
 # {"id":"sourceFile","fileName":"Iterables.kt"}
 kotlin.collections.CollectionsKt__MutableCollectionsJVMKt -> y0.i:
 # {"id":"sourceFile","fileName":"MutableCollectionsJVM.kt"}
     1:1:void sortWith(java.util.List,java.util.Comparator):0:0 -> B
-kotlin.collections.CollectionsKt__MutableCollectionsKt -> R8$$REMOVED$$CLASS$$282:
+kotlin.collections.CollectionsKt__MutableCollectionsKt -> R8$$REMOVED$$CLASS$$284:
 # {"id":"sourceFile","fileName":"MutableCollections.kt"}
 kotlin.collections.CollectionsKt__ReversedViewsKt -> y0.j:
 # {"id":"sourceFile","fileName":"ReversedViews.kt"}
@@ -23782,10 +23957,15 @@ kotlin.collections.CollectionsKt___CollectionsKt -> y0.k:
     22:30:java.util.List sortedWith(java.lang.Iterable,java.util.Comparator):0 -> E
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/List;Ljava/util/Comparator;)Ljava/util/List;"}
     31:35:java.util.List sortedWith(java.lang.Iterable,java.util.Comparator):0:0 -> E
-    12:17:java.util.List kotlin.collections.CollectionsKt___CollectionsKt.toMutableList(java.util.Collection):0:0 -> F
-    12:17:java.util.List toList(java.lang.Iterable):0 -> F
+    1:1:java.util.Collection toCollection(java.lang.Iterable,java.util.Collection):0:0 -> F
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/Collection;Ljava/util/AbstractCollection;)V"}
+    12:17:java.util.List kotlin.collections.CollectionsKt___CollectionsKt.toMutableList(java.util.Collection):0:0 -> G
+    12:17:java.util.List toList(java.lang.Iterable):0 -> G
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/Collection;)Ljava/util/List;"}
-    18:42:java.util.List toList(java.lang.Iterable):0:0 -> F
+    18:42:java.util.List toList(java.lang.Iterable):0:0 -> G
+    34:43:java.util.Set kotlin.collections.SetsKt__SetsJVMKt.setOf(java.lang.Object):0:0 -> H
+    34:43:java.util.Set toSet(java.lang.Iterable):0 -> H
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/ArrayList;)Ljava/util/Set;"}
 kotlin.collections.EmptyIterator -> y0.l:
 # {"id":"sourceFile","fileName":"Collections.kt"}
     kotlin.collections.EmptyIterator INSTANCE -> a
@@ -23885,17 +24065,17 @@ kotlin.collections.EmptySet -> y0.o:
     1:1:java.lang.Object[] toArray():0:0 -> toArray
     2:2:java.lang.Object[] toArray(java.lang.Object[]):0:0 -> toArray
     1:1:java.lang.String toString():0:0 -> toString
-kotlin.collections.IntIterator -> R8$$REMOVED$$CLASS$$283:
+kotlin.collections.IntIterator -> R8$$REMOVED$$CLASS$$285:
 # {"id":"sourceFile","fileName":"PrimitiveIterators.kt"}
-kotlin.collections.MapsKt__MapsJVMKt -> R8$$REMOVED$$CLASS$$284:
+kotlin.collections.MapsKt__MapsJVMKt -> R8$$REMOVED$$CLASS$$286:
 # {"id":"sourceFile","fileName":"MapsJVM.kt"}
-kotlin.collections.MapsKt__MapsKt -> R8$$REMOVED$$CLASS$$285:
+kotlin.collections.MapsKt__MapsKt -> R8$$REMOVED$$CLASS$$287:
 # {"id":"sourceFile","fileName":"Maps.kt"}
-kotlin.collections.SetsKt__SetsJVMKt -> R8$$REMOVED$$CLASS$$286:
+kotlin.collections.SetsKt__SetsJVMKt -> R8$$REMOVED$$CLASS$$288:
 # {"id":"sourceFile","fileName":"SetsJVM.kt"}
-kotlin.collections.SetsKt__SetsKt -> R8$$REMOVED$$CLASS$$287:
+kotlin.collections.SetsKt__SetsKt -> R8$$REMOVED$$CLASS$$289:
 # {"id":"sourceFile","fileName":"Sets.kt"}
-kotlin.collections.SetsKt___SetsKt -> R8$$REMOVED$$CLASS$$288:
+kotlin.collections.SetsKt___SetsKt -> R8$$REMOVED$$CLASS$$290:
 # {"id":"sourceFile","fileName":"_Sets.kt"}
 kotlin.collections.State -> y0.p:
 # {"id":"sourceFile","fileName":"AbstractIterator.kt"}
@@ -24060,11 +24240,11 @@ kotlin.collections.builders.ListBuilder$Itr -> z0.a:
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
     20:38:void remove():0:0 -> remove
     1:1:void set(java.lang.Object):0:0 -> set
-kotlin.collections.builders.ListBuilderKt -> R8$$REMOVED$$CLASS$$289:
+kotlin.collections.builders.ListBuilderKt -> R8$$REMOVED$$CLASS$$291:
 # {"id":"sourceFile","fileName":"ListBuilder.kt"}
-kotlin.comparisons.ComparisonsKt__ComparisonsKt -> R8$$REMOVED$$CLASS$$290:
+kotlin.comparisons.ComparisonsKt__ComparisonsKt -> R8$$REMOVED$$CLASS$$292:
 # {"id":"sourceFile","fileName":"Comparisons.kt"}
-kotlin.internal.PlatformImplementations -> R8$$REMOVED$$CLASS$$291:
+kotlin.internal.PlatformImplementations -> R8$$REMOVED$$CLASS$$293:
 # {"id":"sourceFile","fileName":"PlatformImplementations.kt"}
 kotlin.internal.PlatformImplementations$ReflectThrowable -> a1.a:
 # {"id":"sourceFile","fileName":"PlatformImplementations.kt"}
@@ -24072,15 +24252,15 @@ kotlin.internal.PlatformImplementations$ReflectThrowable -> a1.a:
     39:44:java.lang.Object kotlin.collections.ArraysKt___ArraysKt.singleOrNull(java.lang.Object[]):0:0 -> <clinit>
     39:44:void <clinit>():0 -> <clinit>
     45:79:void <clinit>():0:0 -> <clinit>
-kotlin.internal.ProgressionUtilKt -> R8$$REMOVED$$CLASS$$292:
+kotlin.internal.ProgressionUtilKt -> R8$$REMOVED$$CLASS$$294:
 # {"id":"sourceFile","fileName":"progressionUtil.kt"}
-kotlin.internal.jdk7.JDK7PlatformImplementations -> R8$$REMOVED$$CLASS$$293:
+kotlin.internal.jdk7.JDK7PlatformImplementations -> R8$$REMOVED$$CLASS$$295:
 # {"id":"sourceFile","fileName":"JDK7PlatformImplementations.kt"}
 kotlin.internal.jdk7.JDK7PlatformImplementations$ReflectSdkVersion -> b1.a:
 # {"id":"sourceFile","fileName":"JDK7PlatformImplementations.kt"}
     java.lang.Integer sdkVersion -> a
     1:1:void <clinit>():0:0 -> <clinit>
-kotlin.io.CloseableKt -> R8$$REMOVED$$CLASS$$294:
+kotlin.io.CloseableKt -> R8$$REMOVED$$CLASS$$296:
 # {"id":"sourceFile","fileName":"Closeable.kt"}
 kotlin.io.FileTreeWalk -> c1.g:
 # {"id":"sourceFile","fileName":"FileTreeWalk.kt"}
@@ -24214,11 +24394,11 @@ kotlin.io.FileWalkDirection -> c1.h:
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;)Lc1/h;"}
     1:1:kotlin.io.FileWalkDirection[] values():0:0 -> values
       # {"id":"com.android.tools.r8.residualsignature","signature":"()[Lc1/h;"}
-kotlin.io.FilesKt__FilePathComponentsKt -> R8$$REMOVED$$CLASS$$295:
+kotlin.io.FilesKt__FilePathComponentsKt -> R8$$REMOVED$$CLASS$$297:
 # {"id":"sourceFile","fileName":"FilePathComponents.kt"}
-kotlin.io.FilesKt__FileReadWriteKt -> R8$$REMOVED$$CLASS$$296:
+kotlin.io.FilesKt__FileReadWriteKt -> R8$$REMOVED$$CLASS$$298:
 # {"id":"sourceFile","fileName":"FileReadWrite.kt"}
-kotlin.io.FilesKt__FileTreeWalkKt -> R8$$REMOVED$$CLASS$$297:
+kotlin.io.FilesKt__FileTreeWalkKt -> R8$$REMOVED$$CLASS$$299:
 # {"id":"sourceFile","fileName":"FileTreeWalk.kt"}
 kotlin.io.FilesKt__UtilsKt -> c1.i:
 # {"id":"sourceFile","fileName":"Utils.kt"}
@@ -24674,10 +24854,10 @@ kotlin.io.TextStreamsKt -> c1.j:
     25:89:java.lang.String com.usagewatch.app.ui.LogFileWriterCompat.format(com.usagewatch.app.data.model.LogEntry,java.lang.String):0 -> y
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lt0/a;Ljava/lang/String;)Ljava/lang/String;"}
     90:122:java.lang.String com.usagewatch.app.ui.LogFileWriterCompat.format(com.usagewatch.app.data.model.LogEntry,java.lang.String):0:0 -> y
-    1:2:java.lang.ThreadLocal com.usagewatch.app.data.LogRepository.access$getFmt$cp():0:0 -> z
+    1:2:com.usagewatch.app.data.LogRepository$Companion$fmt$1 com.usagewatch.app.data.LogRepository.access$getFmt$cp():0:0 -> z
     1:2:java.lang.String com.usagewatch.app.data.LogRepository$Companion.formatTimestamp(long):0 -> z
     3:26:java.lang.String com.usagewatch.app.data.LogRepository$Companion.formatTimestamp(long):0:0 -> z
-kotlin.jvm.JvmClassMappingKt -> R8$$REMOVED$$CLASS$$298:
+kotlin.jvm.JvmClassMappingKt -> R8$$REMOVED$$CLASS$$300:
 # {"id":"sourceFile","fileName":"JvmClassMapping.kt"}
 kotlin.jvm.functions.Function0 -> d1.a:
 # {"id":"sourceFile","fileName":"Functions.kt"}
@@ -24729,9 +24909,9 @@ kotlin.jvm.functions.Function8 -> d1.v:
 # {"id":"sourceFile","fileName":"Functions.kt"}
 kotlin.jvm.functions.Function9 -> d1.w:
 # {"id":"sourceFile","fileName":"Functions.kt"}
-kotlin.jvm.internal.ArrayIterator -> R8$$REMOVED$$CLASS$$299:
+kotlin.jvm.internal.ArrayIterator -> R8$$REMOVED$$CLASS$$301:
 # {"id":"sourceFile","fileName":"ArrayIterator.kt"}
-kotlin.jvm.internal.ArrayIteratorKt -> R8$$REMOVED$$CLASS$$300:
+kotlin.jvm.internal.ArrayIteratorKt -> R8$$REMOVED$$CLASS$$302:
 # {"id":"sourceFile","fileName":"ArrayIterator.kt"}
 kotlin.jvm.internal.ClassBasedDeclarationContainer -> e1.a:
 # {"id":"sourceFile","fileName":"ClassBasedDeclarationContainer.kt"}
@@ -24759,7 +24939,7 @@ kotlin.jvm.internal.CollectionToArray -> e1.c:
     1:1:void <clinit>():0:0 -> <clinit>
     1:1:java.lang.Object[] toArray(java.util.Collection):0:0 -> a
     1:1:java.lang.Object[] toArray(java.util.Collection,java.lang.Object[]):0:0 -> b
-kotlin.jvm.internal.Intrinsics -> R8$$REMOVED$$CLASS$$301:
+kotlin.jvm.internal.Intrinsics -> R8$$REMOVED$$CLASS$$303:
 # {"id":"sourceFile","fileName":"Intrinsics.java"}
 kotlin.jvm.internal.Lambda -> e1.d:
 # {"id":"sourceFile","fileName":"Lambda.kt"}
@@ -24823,9 +25003,9 @@ kotlin.ranges.IntRange -> f1.c:
     1:1:int hashCode():0:0 -> hashCode
     1:1:boolean isEmpty():0:0 -> isEmpty
     1:1:java.lang.String toString():0:0 -> toString
-kotlin.ranges.IntRange$Companion -> R8$$REMOVED$$CLASS$$302:
+kotlin.ranges.IntRange$Companion -> R8$$REMOVED$$CLASS$$304:
 # {"id":"sourceFile","fileName":"PrimitiveRanges.kt"}
-kotlin.ranges.RangesKt___RangesKt -> R8$$REMOVED$$CLASS$$303:
+kotlin.ranges.RangesKt___RangesKt -> R8$$REMOVED$$CLASS$$305:
 # {"id":"sourceFile","fileName":"_Ranges.kt"}
 kotlin.reflect.KClass -> g1.a:
 # {"id":"sourceFile","fileName":"KClass.kt"}
@@ -24861,7 +25041,7 @@ kotlin.sequences.FilteringSequence$iterator$1 -> h1.a:
 kotlin.sequences.Sequence -> h1.c:
 # {"id":"sourceFile","fileName":"Sequence.kt"}
     java.util.Iterator iterator() -> iterator
-kotlin.sequences.SequencesKt___SequencesKt -> R8$$REMOVED$$CLASS$$304:
+kotlin.sequences.SequencesKt___SequencesKt -> R8$$REMOVED$$CLASS$$306:
 # {"id":"sourceFile","fileName":"_Sequences.kt"}
 kotlin.sequences.TransformingSequence -> h1.e:
 # {"id":"sourceFile","fileName":"Sequences.kt"}
@@ -24886,9 +25066,9 @@ kotlin.sequences.TransformingSequence$iterator$1 -> h1.d:
     3:6:java.lang.Object next():0 -> next
     7:15:java.lang.Object next():0:0 -> next
     1:1:void remove():0:0 -> remove
-kotlin.text.CharsKt__CharJVMKt -> R8$$REMOVED$$CLASS$$305:
+kotlin.text.CharsKt__CharJVMKt -> R8$$REMOVED$$CLASS$$307:
 # {"id":"sourceFile","fileName":"CharJVM.kt"}
-kotlin.text.CharsKt__CharKt -> R8$$REMOVED$$CLASS$$306:
+kotlin.text.CharsKt__CharKt -> R8$$REMOVED$$CLASS$$308:
 # {"id":"sourceFile","fileName":"Char.kt"}
 kotlin.text.Charsets -> i1.a:
 # {"id":"sourceFile","fileName":"Charsets.kt"}
@@ -24973,11 +25153,11 @@ kotlin.text.MatcherMatchResult$groupValues$1 -> i1.d:
     9:13:int indexOf(java.lang.Object):0 -> indexOf
     9:13:int kotlin.text.MatcherMatchResult$groupValues$1.lastIndexOf(java.lang.String):0:0 -> lastIndexOf
     9:13:int lastIndexOf(java.lang.Object):0 -> lastIndexOf
-kotlin.text.Regex -> R8$$REMOVED$$CLASS$$307:
+kotlin.text.Regex -> R8$$REMOVED$$CLASS$$309:
 # {"id":"sourceFile","fileName":"Regex.kt"}
-kotlin.text.RegexKt -> R8$$REMOVED$$CLASS$$308:
+kotlin.text.RegexKt -> R8$$REMOVED$$CLASS$$310:
 # {"id":"sourceFile","fileName":"Regex.kt"}
-kotlin.text.StringsKt__AppendableKt -> R8$$REMOVED$$CLASS$$309:
+kotlin.text.StringsKt__AppendableKt -> R8$$REMOVED$$CLASS$$311:
 # {"id":"sourceFile","fileName":"Appendable.kt"}
 kotlin.text.StringsKt__RegexExtensionsKt -> i1.f:
 # {"id":"sourceFile","fileName":"RegexExtensions.kt"}
@@ -24985,62 +25165,65 @@ kotlin.text.StringsKt__StringBuilderKt -> i1.g:
 # {"id":"sourceFile","fileName":"StringBuilder.kt"}
 kotlin.text.StringsKt__StringNumberConversionsKt -> i1.h:
 # {"id":"sourceFile","fileName":"StringNumberConversions.kt"}
-kotlin.text.StringsKt__StringsJVMKt -> R8$$REMOVED$$CLASS$$310:
+kotlin.text.StringsKt__StringsJVMKt -> R8$$REMOVED$$CLASS$$312:
 # {"id":"sourceFile","fileName":"StringsJVM.kt"}
 kotlin.text.StringsKt__StringsKt -> i1.j:
 # {"id":"sourceFile","fileName":"Strings.kt"}
-    1:23:boolean kotlin.text.StringsKt__StringsKt.endsWith(java.lang.CharSequence,char,boolean):0:0 -> q0
-    1:23:boolean endsWith$default(java.lang.CharSequence,char,boolean,int,java.lang.Object):0 -> q0
+    12:19:int kotlin.text.StringsKt__StringsKt.indexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object):0:0 -> q0
+    12:19:boolean contains(java.lang.CharSequence,java.lang.CharSequence,boolean):0 -> q0
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Ljava/lang/String;Z)Z"}
+    1:23:boolean kotlin.text.StringsKt__StringsKt.endsWith(java.lang.CharSequence,char,boolean):0:0 -> r0
+    1:23:boolean endsWith$default(java.lang.CharSequence,char,boolean,int,java.lang.Object):0 -> r0
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;C)Z"}
-    1:1:int getLastIndex(java.lang.CharSequence):0:0 -> r0
-    29:41:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean):0:0 -> s0
-    29:41:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean,int,java.lang.Object):0 -> s0
-    29:41:int indexOf(java.lang.CharSequence,java.lang.String,int,boolean):0 -> s0
-    42:44:void kotlin.ranges.IntRange.<init>(int,int):0:0 -> s0
-    42:44:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean):0 -> s0
-    42:44:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean,int,java.lang.Object):0 -> s0
-    42:44:int indexOf(java.lang.CharSequence,java.lang.String,int,boolean):0 -> s0
-    45:103:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean):0:0 -> s0
-    45:103:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean,int,java.lang.Object):0 -> s0
-    45:103:int indexOf(java.lang.CharSequence,java.lang.String,int,boolean):0 -> s0
-    14:37:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0:0 -> t0
-    14:37:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> t0
+    1:1:int getLastIndex(java.lang.CharSequence):0:0 -> s0
+    29:41:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean):0:0 -> t0
+    29:41:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean,int,java.lang.Object):0 -> t0
+    29:41:int indexOf(java.lang.CharSequence,java.lang.String,int,boolean):0 -> t0
+    42:44:void kotlin.ranges.IntRange.<init>(int,int):0:0 -> t0
+    42:44:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean):0 -> t0
+    42:44:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean,int,java.lang.Object):0 -> t0
+    42:44:int indexOf(java.lang.CharSequence,java.lang.String,int,boolean):0 -> t0
+    45:103:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean):0:0 -> t0
+    45:103:int kotlin.text.StringsKt__StringsKt.indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean,int,java.lang.Object):0 -> t0
+    45:103:int indexOf(java.lang.CharSequence,java.lang.String,int,boolean):0 -> t0
+    14:37:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0:0 -> u0
+    14:37:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> u0
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/CharSequence;CIZI)I"}
-    38:57:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0:0 -> t0
-    38:57:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> t0
-    38:57:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> t0
-    58:79:void kotlin.ranges.IntRange.<init>(int,int):0:0 -> t0
-    58:79:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0 -> t0
-    58:79:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> t0
-    58:79:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> t0
-    80:87:int kotlin.ranges.IntProgressionIterator.nextInt():0:0 -> t0
-    80:87:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0 -> t0
-    80:87:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> t0
-    80:87:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> t0
-    88:105:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0:0 -> t0
-    88:105:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> t0
-    88:105:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> t0
-    1:1:boolean kotlin.text.StringsKt__StringsJVMKt.regionMatches(java.lang.String,int,java.lang.String,int,int,boolean):0:0 -> u0
+    38:57:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0:0 -> u0
+    38:57:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> u0
+    38:57:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> u0
+    58:79:void kotlin.ranges.IntRange.<init>(int,int):0:0 -> u0
+    58:79:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0 -> u0
+    58:79:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> u0
+    58:79:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> u0
+    80:87:int kotlin.ranges.IntProgressionIterator.nextInt():0:0 -> u0
+    80:87:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0 -> u0
+    80:87:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> u0
+    80:87:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> u0
+    88:105:int kotlin.text.StringsKt__StringsKt.indexOfAny(java.lang.CharSequence,char[],int,boolean):0:0 -> u0
+    88:105:int kotlin.text.StringsKt__StringsKt.indexOf(java.lang.CharSequence,char,int,boolean):0 -> u0
+    88:105:int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> u0
+    1:1:boolean kotlin.text.StringsKt__StringsJVMKt.regionMatches(java.lang.String,int,java.lang.String,int,int,boolean):0:0 -> v0
       # {"id":"com.android.tools.r8.residualsignature","signature":"(IIILjava/lang/String;Ljava/lang/String;Z)Z"}
-    1:1:boolean regionMatchesImpl(java.lang.CharSequence,int,java.lang.CharSequence,int,int,boolean):0:0 -> v0
-    3:10:boolean kotlin.text.StringsKt__StringsJVMKt.startsWith(java.lang.String,java.lang.String,boolean):0:0 -> w0
-    3:10:boolean kotlin.text.StringsKt__StringsJVMKt.startsWith$default(java.lang.String,java.lang.String,boolean,int,java.lang.Object):0 -> w0
+    1:1:boolean regionMatchesImpl(java.lang.CharSequence,int,java.lang.CharSequence,int,int,boolean):0:0 -> w0
+    3:10:boolean kotlin.text.StringsKt__StringsJVMKt.startsWith(java.lang.String,java.lang.String,boolean):0:0 -> x0
+    3:10:boolean kotlin.text.StringsKt__StringsJVMKt.startsWith$default(java.lang.String,java.lang.String,boolean,int,java.lang.Object):0 -> x0
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;Ljava/lang/String;)Z"}
-    3:10:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0:0 -> x0
-    3:10:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> x0
+    3:10:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0:0 -> y0
+    3:10:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> y0
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/String;)Ljava/lang/String;"}
-    11:16:int kotlin.text.StringsKt__StringsKt.lastIndexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0:0 -> x0
-    11:16:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0 -> x0
-    11:16:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> x0
-    17:26:int kotlin.text.StringsKt__StringsKt.lastIndexOf(java.lang.CharSequence,char,int,boolean):0:0 -> x0
-    17:26:int kotlin.text.StringsKt__StringsKt.lastIndexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> x0
-    17:26:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0 -> x0
-    17:26:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> x0
-    27:40:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0:0 -> x0
-    27:40:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> x0
-    26:57:boolean kotlin.text.CharsKt__CharJVMKt.isWhitespace(char):0:0 -> y0
-    26:57:java.lang.CharSequence trim(java.lang.CharSequence):0 -> y0
-    58:62:java.lang.CharSequence trim(java.lang.CharSequence):0:0 -> y0
+    11:16:int kotlin.text.StringsKt__StringsKt.lastIndexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0:0 -> y0
+    11:16:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0 -> y0
+    11:16:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> y0
+    17:26:int kotlin.text.StringsKt__StringsKt.lastIndexOf(java.lang.CharSequence,char,int,boolean):0:0 -> y0
+    17:26:int kotlin.text.StringsKt__StringsKt.lastIndexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object):0 -> y0
+    17:26:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0 -> y0
+    17:26:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> y0
+    27:40:java.lang.String kotlin.text.StringsKt__StringsKt.substringAfterLast(java.lang.String,char,java.lang.String):0:0 -> y0
+    27:40:java.lang.String substringAfterLast$default(java.lang.String,char,java.lang.String,int,java.lang.Object):0 -> y0
+    26:57:boolean kotlin.text.CharsKt__CharJVMKt.isWhitespace(char):0:0 -> z0
+    26:57:java.lang.CharSequence trim(java.lang.CharSequence):0 -> z0
+    58:62:java.lang.CharSequence trim(java.lang.CharSequence):0:0 -> z0
 kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2 -> i1.i:
 # {"id":"sourceFile","fileName":"Strings.kt"}
     java.util.List $delimitersList -> a
@@ -25116,12 +25299,12 @@ kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2 -> i1.i:
     220:227:kotlin.Pair kotlin.TuplesKt.to(java.lang.Object,java.lang.Object):0:0 -> b
     220:227:kotlin.Pair kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2.invoke(java.lang.CharSequence,int):0 -> b
     220:227:java.lang.Object invoke(java.lang.Object,java.lang.Object):0 -> b
-kotlin.text.StringsKt__StringsKt$splitToSequence$1 -> R8$$REMOVED$$CLASS$$311:
+kotlin.text.StringsKt__StringsKt$splitToSequence$1 -> R8$$REMOVED$$CLASS$$313:
 # {"id":"sourceFile","fileName":"Strings.kt"}
 moe.shizuku.api.BinderContainer -> moe.shizuku.api.BinderContainer:
 # {"id":"sourceFile","fileName":"BinderContainer.java"}
     android.os.IBinder binder -> a
-moe.shizuku.api.BinderContainer$1 -> R8$$REMOVED$$CLASS$$312:
+moe.shizuku.api.BinderContainer$1 -> R8$$REMOVED$$CLASS$$314:
 # {"id":"sourceFile","fileName":"BinderContainer.java"}
 moe.shizuku.server.IRemoteProcess -> j1.c:
 # {"id":"sourceFile","fileName":"IRemoteProcess.java"}
@@ -25250,7 +25433,7 @@ rikka.shizuku.Shizuku$$ExternalSyntheticLambda0 -> k1.a:
       # {"id":"com.android.tools.r8.synthesized"}
 rikka.shizuku.Shizuku$1 -> k1.b:
 # {"id":"sourceFile","fileName":"Shizuku.java"}
-rikka.shizuku.Shizuku$ListenerHolder -> R8$$REMOVED$$CLASS$$313:
+rikka.shizuku.Shizuku$ListenerHolder -> R8$$REMOVED$$CLASS$$315:
 # {"id":"sourceFile","fileName":"Shizuku.java"}
 rikka.shizuku.ShizukuProvider -> rikka.shizuku.ShizukuProvider:
 # {"id":"sourceFile","fileName":"ShizukuProvider.java"}
@@ -25338,7 +25521,7 @@ rikka.shizuku.ShizukuRemoteProcess$$ExternalSyntheticLambda0 -> k1.d:
     4:18:void rikka.shizuku.ShizukuRemoteProcess.lambda$new$0():0:0 -> binderDied
     4:18:void rikka.shizuku.ShizukuRemoteProcess$$InternalSyntheticLambda$1$f5362524882f425d49ef707b0cf48d17ef115f16f03da0b2d12129b3438782b6$0.binderDied():0 -> binderDied
       # {"id":"com.android.tools.r8.synthesized"}
-rikka.shizuku.ShizukuRemoteProcess$1 -> R8$$REMOVED$$CLASS$$314:
+rikka.shizuku.ShizukuRemoteProcess$1 -> R8$$REMOVED$$CLASS$$316:
 # {"id":"sourceFile","fileName":"ShizukuRemoteProcess.java"}
 rikka.shizuku.SystemServiceHelper -> k1.f:
 # {"id":"sourceFile","fileName":"SystemServiceHelper.java"}
@@ -25346,5 +25529,5 @@ rikka.shizuku.SystemServiceHelper -> k1.f:
       # {"id":"com.android.tools.r8.residualsignature","signature":"Ljava/util/HashMap;"}
     java.lang.reflect.Method getService -> b
     1:1:void <clinit>():0:0 -> <clinit>
-rikka.sui.Sui -> R8$$REMOVED$$CLASS$$315:
+rikka.sui.Sui -> R8$$REMOVED$$CLASS$$317:
 # {"id":"sourceFile","fileName":"Sui.java"}

@@ -131,17 +131,6 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <TextView
-            android:id="@+id/tvFileFilterHint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="6dp"
-            android:text="@string/filter_all_apps"
-            android:textColor="@color/text_sub"
-            android:textSize="13sp" />
-
         <ListView
             android:id="@+id/listFiles"
             android:layout_width="match_parent"

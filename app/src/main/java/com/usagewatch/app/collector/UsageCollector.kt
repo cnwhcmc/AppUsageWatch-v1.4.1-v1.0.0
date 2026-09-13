@@ -67,6 +67,9 @@ class UsageCollector(private val context: Context) {
             // 屏幕事件（亮屏/熄屏/锁屏）包名为空，但必须保留（用于输出亮灭屏日志与闭合前台段）
             val screenEvt = isScreenEventType(ev.eventType)
             if (ev.packageName.isNullOrEmpty() && !screenEvt) continue
+            // 监测范围过滤：仅监测模式且该包未勾选 → 直接丢弃，不进入时间线处理
+            // （源头过滤：未监测应用的事件不占内存、不参与状态重建，日志体积显著缩小）
+            if (!screenEvt && !SettingsStore.shouldMonitor(ev.packageName ?: "")) continue
             // 跳过已处理过的事件；同一毫秒内的不同事件（如 RESUME+PAUSE 对）必须都保留，
             // 否则段尾事件被吞会造成前台段挂起、起点漂移（表现为"前台开始持续零秒"或时长虚高）。
             if (ev.timeStamp < lastTs) continue

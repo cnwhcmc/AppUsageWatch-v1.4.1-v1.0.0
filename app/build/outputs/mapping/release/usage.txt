@@ -7365,7 +7365,6 @@ com.usagewatch.app.R$drawable:
     private void <init>()
 com.usagewatch.app.R$id:
     public static int logRow
-    public static int tvFileFilterHint
     public static int tvMasterLabel
     public static int tvTitle
     private void <init>()
@@ -7512,6 +7511,9 @@ com.usagewatch.app.util.SettingsStore:
     private static final java.lang.String KEY_LAST_EVENT_TIME
     private static final java.lang.String KEY_MONITORING_ENABLED
     private static final java.lang.String KEY_MONITOR_DIRS
+    private static final java.lang.String KEY_MONITOR_FILTERED
+    private static final java.lang.String KEY_MONITOR_HINT_DISMISSED
+    private static final java.lang.String KEY_MONITOR_PACKAGES
     private static final java.lang.String KEY_MONITOR_WHOLE_STORAGE
     private static final java.lang.String KEY_NOTIFICATION_VISIBLE
     private static final java.lang.String KEY_RETENTION_DAYS
@@ -12072,7 +12074,6 @@ kotlin.text.StringsKt__StringsKt:
     public static final java.lang.String commonSuffixWith(java.lang.CharSequence,java.lang.CharSequence,boolean)
     public static synthetic java.lang.String commonSuffixWith$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object)
     private static final boolean contains(java.lang.CharSequence,kotlin.text.Regex)
-    public static synthetic boolean contains$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object)
     public static final boolean contentEqualsIgnoreCaseImpl(java.lang.CharSequence,java.lang.CharSequence)
     public static final boolean contentEqualsImpl(java.lang.CharSequence,java.lang.CharSequence)
     public static final kotlin.Pair findAnyOf(java.lang.CharSequence,java.util.Collection,int,boolean)
@@ -17660,6 +17661,15 @@ com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$1c37680174ab45301ec64
 com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$1c37680174ab45301ec644f9a862887af6acdd3e3211de51320c03cba441b5fa$3
 com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$1c37680174ab45301ec644f9a862887af6acdd3e3211de51320c03cba441b5fa$4
 com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$1f0d3fa20b2db3228b35df2f76af7600b69dd4546ef35155e4a6c258fa79b3bc$0
+com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$c41e6b3d90d0d4cf299761c14711a030420966fa583482a61a1180489cfcece5$1
+com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$f66b0372389089c8f8b8565e522fe55a4254d423b89a68c1f4c07f89545d3158$0
+com.usagewatch.app.MainActivity$$InternalSyntheticLambda$2$f66b0372389089c8f8b8565e522fe55a4254d423b89a68c1f4c07f89545d3158$1
+com.usagewatch.app.MainActivity$PickerHolder:
+    public static int getAppIdx()
+    public static android.widget.CheckBox getCb()
+    public static android.widget.ImageView getIcon()
+    public static android.widget.TextView getLabel()
+    public static void setAppIdx()
 com.usagewatch.app.MainActivity$initSpinners$4
 com.usagewatch.app.MainActivity$onCreate$2
 com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1$$InternalSyntheticThrowCCEIfNotNull$19$e9f6669a1445ba7eb26e9ef1ecb4cf2f0af3d0d9e1edf8ed83ea951b8432974f$0
@@ -17669,14 +17679,18 @@ com.usagewatch.app.MainActivity$requestRuntimePermissionsIfNeeded$1:
     public static java.lang.String invoke()
     public static java.lang.CharSequence invoke$1()
     public static void invoke$1()
+com.usagewatch.app.MainActivity$showMonitorPicker$1$$InternalSyntheticLambda$3$62cca431c73e9f30a40b74127f1905a79cec7bfcfdcfa793629cfc0bcf665ed9$1
 com.usagewatch.app.MainActivity:
     public static void hardRefresh()
     public static void initMasterSwitch()
     public static void initSpinners()
     public static void initTabs()
+    public static java.lang.String monitorSpinnerLabel()
     public static void onMasterSwitchEnabled()
     public static void openExportDirPicker()
     public static kotlin.Pair rangeBounds()
+    public static void showMonitorAppsDialog()
+    public static void showMonitorHintOnce()
     public static void syncMonitoring()
 com.usagewatch.app.R$color
 com.usagewatch.app.R$drawable
@@ -17849,6 +17863,7 @@ com.usagewatch.app.ui.LogAdapter:
 com.usagewatch.app.ui.LogFileWriterCompat:
     public static final com.usagewatch.app.ui.LogFileWriterCompat INSTANCE
     static void <clinit>()
+com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3928be05253fdbd2ac599cc1783b3f263d27eb63832b28523872367c20812902$2
 com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$3da1bfcdc5c2b640425017e62169457fffd00612e25a16b90a5825cb0e1bc1fa$0
 com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$67daa06f964b076fa46047398c1e53aad191504d402097538182b915f637bd6b$0
 com.usagewatch.app.ui.SettingsBuilder$$InternalSyntheticLambda$2$a44e844e3370615f991660c5e9454582b20888f0e7943f64a8110356b436959e$0
@@ -17910,10 +17925,10 @@ com.usagewatch.app.util.AppInfoResolver$AppInfo:
 com.usagewatch.app.util.AppInfoResolver:
     public static final com.usagewatch.app.util.AppInfoResolver INSTANCE
 com.usagewatch.app.util.DefaultIconHolder
-com.usagewatch.app.util.LogFileWriter$$InternalSyntheticLambda$1$0329d4bcbbc086edbf5829a78b4eaaf8b793c7f130ea33d4f0916ab2c39f5373$0
-com.usagewatch.app.util.LogFileWriter$$InternalSyntheticLambda$1$0329d4bcbbc086edbf5829a78b4eaaf8b793c7f130ea33d4f0916ab2c39f5373$2
 com.usagewatch.app.util.LogFileWriter$append$1$lines$2
-com.usagewatch.app.util.LogFileWriter$append$lambda$4$$inlined$sortedBy$1
+com.usagewatch.app.util.LogFileWriter$append$lambda$2$$inlined$sortedBy$1
+com.usagewatch.app.util.LogFileWriter$dayFmt$1
+com.usagewatch.app.util.LogFileWriter$lineFmt$1
 com.usagewatch.app.util.LogFileWriter$logException$stack$1:
     public static java.lang.CharSequence invoke$2()
 com.usagewatch.app.util.LogFileWriter:
@@ -17946,6 +17961,7 @@ com.usagewatch.app.util.SettingsStore:
     public static boolean isDefaultExportDir()
     public static boolean isUsageGuideShown()
     public static long lastEventTime()
+    public static boolean monitorHintDismissed()
     public static long retentionCutoffMillis()
     public static void setBackgroundEstimateEnabled()
     public static void setDisplayMode()
@@ -17953,6 +17969,7 @@ com.usagewatch.app.util.SettingsStore:
     public static void setForceNormalMode()
     public static void setLastEventTime(long)
     public static void setMonitorDirs(java.util.Set)
+    public static void setMonitorHintDismissed()
     public static void setMonitorWholeStorage()
     public static void setMonitoringEnabled(boolean)
     public static void setNotificationVisible()
@@ -18023,7 +18040,6 @@ kotlin.collections.CollectionsKt___CollectionsJvmKt
 kotlin.collections.CollectionsKt___CollectionsKt$asSequence$$inlined$Sequence$1
 kotlin.collections.CollectionsKt___CollectionsKt:
     public static java.lang.Object getOrNull(java.util.List,int)
-    public static final void toCollection(java.util.Collection,java.util.AbstractCollection)
     public static final java.util.ArrayList toMutableList(java.util.Collection)
     public static final java.util.List toMutableList(java.util.Collection)
 kotlin.collections.EmptyIterator:
@@ -18220,6 +18236,7 @@ kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$2:
     public static kotlin.Pair invoke()
 kotlin.text.StringsKt__StringsKt$splitToSequence$1
 kotlin.text.StringsKt__StringsKt:
+    public static synthetic boolean contains$default(java.lang.String,java.lang.String)
     public static final int indexOf$StringsKt__StringsKt(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean,boolean)
     public static int indexOf$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.CharSequence,int,int,boolean)
     public static synthetic int indexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int)

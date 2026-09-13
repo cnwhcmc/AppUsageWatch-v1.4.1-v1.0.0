@@ -22,8 +22,8 @@ android {
         // 低版本兼容到 Android 7.1.1 (API 25)，高版本到最新（targetSdk 34）
         minSdk = 25
         targetSdk = 34
-        versionCode = 18
-        versionName = "1.4.1"
+        versionCode = 21
+        versionName = "1.5.1"
     }
 
     signingConfigs {

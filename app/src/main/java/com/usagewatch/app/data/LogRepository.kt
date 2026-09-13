@@ -152,8 +152,10 @@ class LogRepository(private val context: Context) {
 
     companion object {
         // 毫秒级对使用记录无意义，统一到秒，减少视觉噪音
-        private val fmt = ThreadLocal.withInitial {
-            SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
+        // 不用 ThreadLocal.withInitial（API 26+，minSdk 25 会崩溃），用 initialValue() 覆盖（API 1 兼容）
+        private val fmt = object : ThreadLocal<SimpleDateFormat>() {
+            override fun initialValue(): SimpleDateFormat =
+                SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
         }
 
         fun formatTimestamp(ts: Long): String = fmt.get()?.format(Date(ts)) ?: ""

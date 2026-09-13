@@ -122,6 +122,8 @@ class TimelineProcessor(
     fun calibrateForeground(pkg: String, ts: Long, out: MutableList<LogEntry>) {
         try {
             if (pkg.isEmpty()) return
+            // 监测范围过滤：仅监测模式下，未勾选应用不参与前台校准
+            if (!SettingsStore.shouldMonitor(pkg)) return
             if (activeSessions.isEmpty()) return
             val others = activeSessions.keys.filter { it != pkg }
             others.forEach { closeSession(it, ts, out) }
