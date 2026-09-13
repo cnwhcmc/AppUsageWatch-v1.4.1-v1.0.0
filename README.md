@@ -9,6 +9,7 @@ Android 应用使用时间监控与日志记录工具。
 - **targetSdk / compileSdk**：34
 - **技术栈**：Kotlin + 原生 SQLite + 系统 UsageStats + FileObserver（运行时依赖仅 AppCompat/Shizuku 官方 API，安装包约 830KB）
 - **显示**：日志按时间**倒序（最新在上）**；时间精确到秒；日志行**长按可复制**；不足 1 秒的瞬时段自动过滤不显示
+- **注**：此软件使用了**AI编写**，但是**保证稳定性**，中国人不骗中国人，来都来了，试试嘛
 
 ---
 
