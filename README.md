@@ -2,16 +2,14 @@
 
 Android 应用使用时间监控与日志记录工具。
 
-> **AI 开发声明**：本项目的需求设计、代码实现与迭代均由 AI 辅助完成。
-
 - **包名**：`com.usagewatch.app`
 - **应用名**：使用日志
-- **版本**：1.5.1（versionCode 21）
+- **版本**：1.4.1（versionCode 18）
 - **minSdk**：25（Android 7.1.1，低版本可用）
 - **targetSdk / compileSdk**：34
 - **技术栈**：Kotlin + 原生 SQLite + 系统 UsageStats + FileObserver（运行时依赖仅 AppCompat/Shizuku 官方 API，安装包约 830KB）
 - **显示**：日志按时间**倒序（最新在上）**；时间精确到秒；日志行**长按可复制**；不足 1 秒的瞬时段自动过滤不显示
-- **开源说明**：工程已剔除签名密钥（keystore），如需自行发布请用本地密钥重新签名编译。
+- **注**：此软件使用了**AI编写**，但是**保证稳定性**，中国人不骗中国人，来都来了，试试嘛
 
 ---
 
@@ -27,7 +25,6 @@ Android 应用使用时间监控与日志记录工具。
    - 记录"时间 + 路径 + 事件类型"（创建 / 删除 / 移动 / 写入）。范围或目录变更后，后台服务在下一采样周期自动生效（≤30 秒），无需重启应用。
 5. **日志双写**：事件同时写入 SQLite（查询用）与按天滚动的文本日志（`app_yyyyMMdd.log`，程序员可读）。
 6. **服务状态可查**：设置页实时显示"采集服务运行中 · 最后采集时间"，直接判断服务是否真的在跑、是否有心跳数据。
-7. **仅监测所选应用（v1.4.2+）**：首页应用下拉可勾选监测范围（支持搜索），未勾选应用的前台/后台数据在采集源头丢弃，日志体积随监测范围显著缩小；切回"全部应用"即恢复监测全部。
 
 ### 附加能力
 5. **日志保留天数可配**（默认 7 天，可 1/3/7/30 天或永久），每日自动清理过期数据。
@@ -169,13 +166,13 @@ UI 读取（MainActivity，后台线程查询）
 - Gradle wrapper 8.6（已生成）
 
 ```bash
-export JAVA_HOME=<你的 JDK 17 路径>
-export ANDROID_HOME=<你的 Android SDK 路径>
+export JAVA_HOME=/home/user/android-build-tools/jdk-17.0.20.1+1
+export ANDROID_HOME=/home/user/android-build-tools/android-sdk
 ./gradlew assembleDebug          # 调试包（debug 自动签名）
 ./gradlew assembleRelease        # 发布包（已配置混淆 + keystore 签名）
 ```
 
-- release 签名：本地 `keystore/usagewatch.jks` + `keystore.properties`（含私钥密码）。**这两者已被 .gitignore 排除，严禁提交到仓库**；私钥丢失无法找回，泄露可被冒用签名发布恶意版本。
+- release 签名：`keystore/usagewatch.jks` + `keystore.properties`（含私钥密码）。**私钥丢失无法找回**，只能以同一签名覆盖升级；**切勿将 keystore 与密码公开分发**。
 - 产物：`app/build/outputs/apk/debug/app-debug.apk`、`app/build/outputs/apk/release/app-release.apk`
 
 ---
